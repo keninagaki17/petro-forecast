@@ -1,0 +1,7 @@
+,WAPE anual por unidade,Erro anual da carteira,anos
+Ingênuo (repete o último mês),0.1584007850832359,0.05556116435036148,15.0
+Curva de declínio (Arps) da unidade,0.16459148220160297,0.08501187499311168,15.0
+Suavização exponencial (ETS),0.16417523249408378,0.05492809537322606,15.0
+ML + ingênuo nos meses iniciais,0.1268190139348844,0.05342038989309406,15.0
+Ingênuo + plataformas novas,0.14379142899824698,0.06015710442463002,15.0
+Modelo final (ML + plataformas novas),0.11645786510594922,0.05568437786539166,15.0

@@ -1,0 +1,213 @@
+{
+  "rho": 0.029807644510277922,
+  "rampa": {
+    "curva": 0.2874823736878383,
+    "linear": 0.3246832387137909,
+    "n": 42
+  },
+  "anual": {
+    "m_ingenuo": {
+      "WAPE anual por unidade": 0.1584,
+      "Erro anual da carteira": 0.0556,
+      "anos": 15.0
+    },
+    "m_arps": {
+      "WAPE anual por unidade": 0.1646,
+      "Erro anual da carteira": 0.085,
+      "anos": 15.0
+    },
+    "m_ets": {
+      "WAPE anual por unidade": 0.1642,
+      "Erro anual da carteira": 0.0549,
+      "anos": 15.0
+    },
+    "final": {
+      "WAPE anual por unidade": 0.1268,
+      "Erro anual da carteira": 0.0534,
+      "anos": 15.0
+    },
+    "m_ingenuo_proj": {
+      "WAPE anual por unidade": 0.1438,
+      "Erro anual da carteira": 0.0602,
+      "anos": 15.0
+    },
+    "final_proj": {
+      "WAPE anual por unidade": 0.1165,
+      "Erro anual da carteira": 0.0557,
+      "anos": 15.0
+    }
+  },
+  "pesos_combinacao": {
+    "1": 0.25,
+    "2": 0.45,
+    "3": 0.6000000000000001,
+    "4": 0.65,
+    "5": 0.7000000000000001,
+    "6": 0.7000000000000001,
+    "7": 0.7000000000000001,
+    "8": 0.65,
+    "9": 0.65,
+    "10": 0.65,
+    "11": 0.7000000000000001,
+    "12": 0.7000000000000001,
+    "13": 0.75,
+    "14": 0.8,
+    "15": 0.8500000000000001,
+    "16": 0.8500000000000001,
+    "17": 0.9,
+    "18": 0.9500000000000001
+  },
+  "ultimo_mes": "2026-09",
+  "lacunas": [],
+  "n_pocos": 2565,
+  "n_unidades": 94,
+  "n_origens": 200,
+  "cobertura_p10_p90": 0.851458565869257,
+  "k_preco_brent": 0.9092372955392313,
+  "fator_calibracao": 0.9772845314237373,
+  "ultimo_preco_anp": "2025-12",
+  "erro_calibracao_2022": 0.01847340359987822,
+  "torneio": {
+    "Tudo": {
+      "Ingênuo (repete o último mês)": {
+        "WAPE por unidade": 0.2018,
+        "Erro da carteira": 0.0615,
+        "Viés": -0.0209
+      },
+      "Média dos últimos 3 meses": {
+        "WAPE por unidade": 0.2048,
+        "Erro da carteira": 0.062,
+        "Viés": -0.0244
+      },
+      "Curva de declínio (Arps) da unidade": {
+        "WAPE por unidade": 0.2106,
+        "Erro da carteira": 0.1068,
+        "Viés": -0.107
+      },
+      "Arps poço a poço": {
+        "WAPE por unidade": 0.269,
+        "Erro da carteira": 0.2083,
+        "Viés": -0.2141
+      },
+      "Suavização exponencial (ETS)": {
+        "WAPE por unidade": 0.2119,
+        "Erro da carteira": 0.0737,
+        "Viés": -0.0078
+      },
+      "ML (LightGBM híbrido + teto de capacidade)": {
+        "WAPE por unidade": 0.1785,
+        "Erro da carteira": 0.0662,
+        "Viés": -0.0165
+      },
+      "ML + ingênuo nos meses iniciais": {
+        "WAPE por unidade": 0.1754,
+        "Erro da carteira": 0.0636,
+        "Viés": -0.0191
+      },
+      "Ingênuo + plataformas novas": {
+        "WAPE por unidade": 0.1802,
+        "Erro da carteira": 0.0598,
+        "Viés": 0.014
+      },
+      "Modelo final (ML + plataformas novas)": {
+        "WAPE por unidade": 0.16,
+        "Erro da carteira": 0.0596,
+        "Viés": 0.0159
+      }
+    },
+    "2010–2018": {
+      "Ingênuo (repete o último mês)": {
+        "WAPE por unidade": 0.2169,
+        "Erro da carteira": 0.0579,
+        "Viés": -0.0065
+      },
+      "Média dos últimos 3 meses": {
+        "WAPE por unidade": 0.222,
+        "Erro da carteira": 0.0584,
+        "Viés": -0.0083
+      },
+      "Curva de declínio (Arps) da unidade": {
+        "WAPE por unidade": 0.2242,
+        "Erro da carteira": 0.102,
+        "Viés": -0.1014
+      },
+      "Arps poço a poço": {
+        "WAPE por unidade": 0.2701,
+        "Erro da carteira": 0.2007,
+        "Viés": -0.2052
+      },
+      "Suavização exponencial (ETS)": {
+        "WAPE por unidade": 0.2289,
+        "Erro da carteira": 0.0772,
+        "Viés": 0.0237
+      },
+      "ML (LightGBM híbrido + teto de capacidade)": {
+        "WAPE por unidade": 0.192,
+        "Erro da carteira": 0.0639,
+        "Viés": 0.0094
+      },
+      "ML + ingênuo nos meses iniciais": {
+        "WAPE por unidade": 0.1869,
+        "Erro da carteira": 0.0601,
+        "Viés": 0.0038
+      },
+      "Ingênuo + plataformas novas": {
+        "WAPE por unidade": 0.1916,
+        "Erro da carteira": 0.0627,
+        "Viés": 0.0392
+      },
+      "Modelo final (ML + plataformas novas)": {
+        "WAPE por unidade": 0.171,
+        "Erro da carteira": 0.0643,
+        "Viés": 0.0495
+      }
+    },
+    "2022 em diante": {
+      "Ingênuo (repete o último mês)": {
+        "WAPE por unidade": 0.1785,
+        "Erro da carteira": 0.0721,
+        "Viés": -0.0554
+      },
+      "Média dos últimos 3 meses": {
+        "WAPE por unidade": 0.1798,
+        "Erro da carteira": 0.0749,
+        "Viés": -0.0624
+      },
+      "Curva de declínio (Arps) da unidade": {
+        "WAPE por unidade": 0.1911,
+        "Erro da carteira": 0.1239,
+        "Viés": -0.1242
+      },
+      "Arps poço a poço": {
+        "WAPE por unidade": 0.2683,
+        "Erro da carteira": 0.2284,
+        "Viés": -0.2322
+      },
+      "Suavização exponencial (ETS)": {
+        "WAPE por unidade": 0.1805,
+        "Erro da carteira": 0.0761,
+        "Viés": -0.0568
+      },
+      "ML (LightGBM híbrido + teto de capacidade)": {
+        "WAPE por unidade": 0.1527,
+        "Erro da carteira": 0.076,
+        "Viés": -0.0651
+      },
+      "ML + ingênuo nos meses iniciais": {
+        "WAPE por unidade": 0.1542,
+        "Erro da carteira": 0.0752,
+        "Viés": -0.0639
+      },
+      "Ingênuo + plataformas novas": {
+        "WAPE por unidade": 0.1528,
+        "Erro da carteira": 0.0555,
+        "Viés": -0.0187
+      },
+      "Modelo final (ML + plataformas novas)": {
+        "WAPE por unidade": 0.1334,
+        "Erro da carteira": 0.0525,
+        "Viés": -0.0272
+      }
+    }
+  }
+}

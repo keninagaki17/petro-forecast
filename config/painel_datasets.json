@@ -1,0 +1,32 @@
+{
+  "artefato": "https://claude.ai/artifact/9EtkViuifarM7LAsJbWqcf",
+  "datasets": {
+    "acuracia": "saidas/painel/json/acuracia.json",
+    "campos_empresa": "saidas/painel/json/campos_empresa.json",
+    "central": "saidas/painel/json/central.json",
+    "crescimento": "saidas/painel/json/crescimento.json",
+    "curva_rampa": "saidas/painel/json/curva_rampa.json",
+    "dependencia": "saidas/painel/json/dependencia.json",
+    "empresas_mensal": "saidas/painel/json/empresas_mensal.json",
+    "empresas_resumo": "saidas/painel/json/empresas_resumo.json",
+    "fontes": "saidas/painel/json/fontes.json",
+    "historico": "saidas/painel/json/historico.json",
+    "kpis": "saidas/painel/json/kpis.json",
+    "mercado": "saidas/painel/json/mercado.json",
+    "pesos": "saidas/painel/json/pesos.json",
+    "pr_campos": "saidas/painel/json/pr_campos.json",
+    "precos": "saidas/painel/json/precos.json",
+    "projetos_mensal": "saidas/painel/json/projetos_mensal.json",
+    "rampa_resumo": "saidas/painel/json/rampa_resumo.json",
+    "rampas": "saidas/painel/json/rampas.json",
+    "receita_meses": "saidas/painel/json/receita_meses.json",
+    "royalties_benef": "saidas/painel/json/royalties_benef.json",
+    "royalties_resumo": "saidas/painel/json/royalties_resumo.json",
+    "sim_unidades": "saidas/painel/json/sim_unidades.json",
+    "socios_campos": "saidas/painel/json/socios_campos.json",
+    "unidades_mensal": "saidas/painel/json/unidades_mensal.json",
+    "unidades_resumo": "saidas/painel/json/unidades_resumo.json",
+    "hist_campos": "saidas/painel/json/hist_campos.json",
+    "central_campos": "saidas/painel/json/central_campos.json"
+  }
+}

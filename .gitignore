@@ -1,0 +1,13 @@
+dados_brutos/
+dados_teste/
+teste/
+__pycache__/
+*.pyc
+pacote_dados.zip
+saidas/amostras.pkl
+*.log
+saidas_teste/
+saidas_reais/
+dados_reais/
+run*.log
+.pytest_cache/

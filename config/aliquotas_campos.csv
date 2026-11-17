@@ -1,0 +1,6 @@
+# Alíquota de royalties por campo (nome como na ANP). Campos não listados usam a regra:
+#   nomes terminados em _ECO (excedente da cessão onerosa, partilha) e ANC_ (área não contratada): 15%
+#   demais: 10% (concessão e cessão onerosa)
+# O cálculo é calibrado contra a arrecadação nacional publicada pela ANP (ver relatório).
+campo,aliquota
+MERO,0.15

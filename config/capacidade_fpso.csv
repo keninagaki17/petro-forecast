@@ -1,0 +1,18 @@
+# Capacidade nominal de processamento de óleo (bbl/dia) de plataformas recentes, ainda em rampa.
+# Usada como teto da previsão de cada unidade (soma das plataformas ativas). Para plataformas sem
+# linha aqui, o teto é a maior produção mensal observada nos últimos 24 meses.
+# Fonte: divulgações públicas das operadoras. todas verificadas em 13/11/2026.
+instalacao,capacidade_bpd,status,fonte
+FPSO Guanabara,180000,verificado,Petrobras/Modec: 180 mil bpd
+FPSO SEPETIBA,180000,verificado,Petrobras: 180 mil bpd (Mero 2)
+FPSO MARECHAL DUQUE DE CAXIAS,180000,verificado,Petrobras/MISC: 180 mil bpd (Mero 3)
+FPSO Alexandre de Gusmão,180000,verificado,Petrobras/SBM: 180 mil bpd (Mero 4)
+FPSO ALMIRANTE TAMANDARE,225000,verificado,Petrobras/SBM: 225 mil bpd
+FPSO ALMIRANTE BARROSO,150000,verificado,Petrobras/Modec: 150 mil bpd
+PETROBRAS 78,180000,verificado,Petrobras: 180 mil bpd
+PETROBRAS 79,180000,verificado,Petrobras: 180 mil bpd
+FPSO BACALHAU,220000,verificado,Equinor/Modec: 220 mil bpd
+FPSO Maria Quitéria,100000,verificado,Petrobras/Yinson: 100 mil bpd
+FPSO ANNA NERY,70000,verificado,Petrobras/Yinson: 70 mil bpd
+FPSO ANITA GARIBALDI,80000,verificado,Petrobras/Modec: 80 mil bpd
+FPSO ATLANTA,50000,verificado,Enauta (Brava)/Yinson: 50 mil bpd

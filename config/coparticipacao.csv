@@ -1,0 +1,11 @@
+# Campos compartilhados em que o arquivo de produção por poço da ANP traz só a parcela de um dos contratos.
+# O script recria a parcela que falta a partir do percentual oficial do acordo.
+# campo_reportado: nome que aparece no arquivo; parcela_reportada: fração do total que ele representa;
+# campo_faltante: contrato cuja parcela não aparece; desde: início do acordo.
+# Fontes: boletins mensais da ANP (Búzios, Atapu, Sépia, Mero) e fato relevante da Petrobras (Itapu, 12/07/2021).
+campo_reportado,parcela_reportada,campo_faltante,desde
+BÚZIOS_ECO,0.738795,BÚZIOS,2021-09-01
+SÉPIA_ECO,0.687,SÉPIA,2022-05-01
+ATAPU_ECO,0.605,ATAPU,2022-05-01
+ITAPU,0.51708,ITAPU_ECO,2021-09-01
+MERO,0.965,ANC_MERO,2022-01-01

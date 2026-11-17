@@ -1,0 +1,13 @@
+# Acordos de Individualização da Produção (AIP) que mudam a participação por campo a partir de uma data.
+# A Relação de Concessionários da ANP mostra a participação no CONTRATO (BM-S-11A: Petrobras 42,5%, Shell 25%,
+# TotalEnergies 22,5%, Petrogal 10%); com o AIP, a jazida passa a ter as participações abaixo.
+# Fonte: comunicado da Petrobras de 13/10/2026 sobre os AEGVs de Berbigão e Sururu; AIPs em vigor desde 01/05/2026 (ANP).
+campo,empresa,pct,operador,desde
+BERBIGÃO,Petrobras,0.62913,True,2026-05-01
+BERBIGÃO,Shell,0.16125,False,2026-05-01
+BERBIGÃO,TotalEnergies,0.14512,False,2026-05-01
+BERBIGÃO,Galp,0.06450,False,2026-05-01
+SURURU,Petrobras,0.45394,True,2026-05-01
+SURURU,Shell,0.23742,False,2026-05-01
+SURURU,TotalEnergies,0.21367,False,2026-05-01
+SURURU,Galp,0.09497,False,2026-05-01

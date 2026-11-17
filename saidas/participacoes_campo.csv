@@ -1,0 +1,145 @@
+campo,empresa,pct,operador
+TUPI,Galp,0.1,False
+TUPI,Petrobras,0.65,True
+TUPI,Shell,0.25,False
+LULA,Galp,0.1,False
+LULA,Petrobras,0.65,True
+LULA,Shell,0.25,False
+SUL DE TUPI,Petrobras,1.0,True
+SUL DE LULA,Petrobras,1.0,True
+ANC_TUPI,União (PPSA),1.0,False
+BÚZIOS,Petrobras,1.0,True
+TAMBUATÁ,Petrobras,1.0,True
+BÚZIOS_ECO,CNOOC,0.1,False
+BÚZIOS_ECO,CNPC,0.05,False
+BÚZIOS_ECO,Petrobras,0.85,True
+MERO,CNOOC,0.1,False
+MERO,CNPC,0.1,False
+MERO,Petrobras,0.4,True
+MERO,Shell,0.2,False
+MERO,TotalEnergies,0.2,False
+ANC_MERO,União (PPSA),1.0,False
+ATAPU,Petrobras,1.0,True
+ATAPU_ECO,Petrobras,0.525,True
+ATAPU_ECO,Shell,0.25,False
+ATAPU_ECO,TotalEnergies,0.225,False
+OESTE DE ATAPU,Galp,0.1,False
+OESTE DE ATAPU,Petrobras,0.425,True
+OESTE DE ATAPU,Shell,0.25,False
+OESTE DE ATAPU,TotalEnergies,0.225,False
+ANC_NORTE_ATAPU,União (PPSA),1.0,False
+SÉPIA,Petrobras,1.0,True
+SÉPIA_ECO,Petrobras,0.3,True
+SÉPIA_ECO,Petronas,0.21,False
+SÉPIA_ECO,QatarEnergy,0.21,False
+SÉPIA_ECO,TotalEnergies,0.28,False
+ITAPU,Petrobras,1.0,True
+ITAPU_ECO,Petrobras,1.0,True
+SUL DE BERBIGÃO,Petrobras,1.0,True
+NORTE DE BERBIGÃO,Petrobras,1.0,True
+SAPINHOÁ,Petrobras,0.45,True
+SAPINHOÁ,Repsol Sinopec,0.25,False
+SAPINHOÁ,Shell,0.3,False
+NORDESTE DE SAPINHOÁ,Petrobras,0.45,True
+NORDESTE DE SAPINHOÁ,Repsol Sinopec,0.25,False
+NORDESTE DE SAPINHOÁ,Shell,0.3,False
+NOROESTE DE SAPINHOÁ,Petrobras,0.45,True
+NOROESTE DE SAPINHOÁ,Repsol Sinopec,0.25,False
+NOROESTE DE SAPINHOÁ,Shell,0.3,False
+SUDOESTE DE SAPINHOÁ,Petrobras,0.45,True
+SUDOESTE DE SAPINHOÁ,Repsol Sinopec,0.25,False
+SUDOESTE DE SAPINHOÁ,Shell,0.3,False
+LAPA,Repsol Sinopec,0.25,False
+LAPA,Shell,0.27,False
+LAPA,TotalEnergies,0.48,True
+BACALHAU,Equinor,0.4,True
+BACALHAU,ExxonMobil,0.4,False
+BACALHAU,Galp,0.2,False
+BACALHAU NORTE,Equinor,0.4,True
+BACALHAU NORTE,ExxonMobil,0.4,False
+BACALHAU NORTE,Galp,0.2,False
+JUBARTE,Petrobras,1.0,True
+BALEIA AZUL,Petrobras,1.0,True
+BALEIA FRANCA,Petrobras,1.0,True
+BALEIA ANÃ,Petrobras,1.0,True
+CACHALOTE,Petrobras,1.0,True
+PIRAMBU,Petrobras,1.0,True
+ANC_JUBARTE_NORDESTE,União (PPSA),1.0,False
+ANC_JUBARTE_SUDOESTE,União (PPSA),1.0,False
+ARGONAUTA,Brava,0.23,False
+ARGONAUTA,ONGC,0.27,False
+ARGONAUTA,Shell,0.5,True
+OSTRA,Brava,0.23,False
+OSTRA,ONGC,0.27,False
+OSTRA,Shell,0.5,True
+ABALONE,Brava,0.23,False
+ABALONE,ONGC,0.27,False
+ABALONE,Shell,0.5,True
+ANC_ARGONAUTA_ME1,União (PPSA),1.0,False
+PEREGRINO,Equinor,0.2,False
+PEREGRINO,PRIO,0.8,True
+PITANGOLA,Equinor,0.2,False
+PITANGOLA,PRIO,0.8,True
+TARTARUGA VERDE,Petrobras,0.5,True
+TARTARUGA VERDE,Petronas,0.5,False
+TARTARUGA MESTIÇA,Petrobras,0.5,True
+TARTARUGA MESTIÇA,Petronas,0.5,False
+TARTARUGA VERDE SUDOESTE,Petrobras,1.0,True
+ATLANTA,Brava,0.8,True
+ATLANTA,Westlawn Energia,0.2,False
+PAPA-TERRA,Brava,0.625,True
+PAPA-TERRA,Nova Técnica,0.375,False
+BAÚNA,Karoon,1.0,True
+PIRACABA,Karoon,1.0,True
+FRADE,PRIO,0.9999999999999999,True
+ALBACORA LESTE,PRIO,0.9,True
+ALBACORA LESTE,Repsol Sinopec,0.1,False
+ALBACORA,Petrobras,1.0,True
+POLVO,PRIO,1.0,True
+TUBARÃO MARTELO,PRIO,1.0,True
+WAHOO,IBV Brasil Petróleo,0.35710000000000003,False
+WAHOO,PRIO,0.6429,True
+MARLIM,Petrobras,1.0,True
+MARLIM SUL,Petrobras,1.0,True
+MARLIM LESTE,Petrobras,1.0,True
+VOADOR,Petrobras,1.0,True
+RONCADOR,Equinor,0.25,False
+RONCADOR,Petrobras,0.75,True
+ESPADARTE,Petrobras,0.5,True
+ESPADARTE,Petronas,0.5,False
+BARRACUDA,Petrobras,1.0,True
+CARATINGA,Petrobras,1.0,True
+MARIMBÁ,Trident,1.0,True
+CARAPEBA,Perenco,1.0,True
+PARGO,Perenco,1.0,True
+VERMELHO,Perenco,1.0,True
+PAMPO,Trident,1.0,True
+LINGUADO,Trident,1.0,True
+TRILHA,Trident,1.0,True
+BADEJO,Trident,1.0,True
+BONITO,Trident,1.0,True
+BICUDO,Trident,1.0,True
+ENCHOVA,Trident,1.0,True
+ENCHOVA OESTE,Trident,1.0,True
+PIRAÚNA,Trident,1.0,True
+BIJUPIRÁ,Petrobras,0.2,False
+BIJUPIRÁ,Shell,0.8,True
+SALEMA,Petrobras,0.2,False
+SALEMA,Shell,0.8,True
+CONGRO,Petrobras,1.0,True
+CORVINA,Petrobras,1.0,True
+MALHADO,Petrobras,1.0,True
+GAROUPA,Petrobras,1.0,True
+GAROUPINHA,Petrobras,1.0,True
+NORDESTE DE NAMORADO,Petrobras,1.0,True
+ANEQUIM,Petrobras,1.0,True
+VIOLA,Petrobras,1.0,True
+PARATI,Petrobras,1.0,True
+BERBIGÃO,Petrobras,0.62913,True
+BERBIGÃO,Shell,0.16125,False
+BERBIGÃO,TotalEnergies,0.14512,False
+BERBIGÃO,Galp,0.0645,False
+SURURU,Petrobras,0.45394,True
+SURURU,Shell,0.23742,False
+SURURU,TotalEnergies,0.21367,False
+SURURU,Galp,0.09497,False

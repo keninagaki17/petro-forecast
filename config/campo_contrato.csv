@@ -1,0 +1,93 @@
+# Contrato da ANP ("Nome Fantasia" na Relação de Concessionários) de cada campo de produção.
+# "UNIAO" = área não contratada: a produção é da União, representada pela PPSA.
+# Campos fora da lista ficam como "Outras". status "conferir": montado a partir de informação pública.
+campo,contrato,status
+TUPI,BM-S-11,conferir
+LULA,BM-S-11,conferir
+SUL DE TUPI,C_Onerosa_2010,conferir
+SUL DE LULA,C_Onerosa_2010,conferir
+ANC_TUPI,UNIAO,conferir
+BÚZIOS,C_Onerosa_2010,conferir
+TAMBUATÁ,C_Onerosa_2010,conferir
+BÚZIOS_ECO,Búzios_EXC,conferir
+MERO,LIBRA_P1,verificado: Mero = contrato de partilha de Libra (PPSA)
+ANC_MERO,UNIAO,conferir
+ATAPU,C_Onerosa_2010,conferir
+ATAPU_ECO,ATAPU_EXC,conferir
+OESTE DE ATAPU,BM-S-11A,conferir
+ANC_NORTE_ATAPU,UNIAO,conferir
+SÉPIA,C_Onerosa_2010,conferir
+SÉPIA_ECO,SEPIA_EXC,conferir
+ITAPU,C_Onerosa_2010,conferir
+ITAPU_ECO,Itapu_EXC,conferir
+BERBIGÃO,BM-S-11A,verificado: concessão BM-S-11A + Cessão Onerosa; participações do AIP em config/participacoes_aip.csv a partir de mai/2026
+SUL DE BERBIGÃO,C_Onerosa_2010,inferido: área da Cessão Onerosa; produção passou a ser reportada em BERBIGÃO quando o AIP entrou em vigor (mai/2026)
+NORTE DE BERBIGÃO,C_Onerosa_2010,inferido: área da Cessão Onerosa (mesmo caso de Sul de Berbigão)
+SURURU,BM-S-11A,verificado: concessão BM-S-11A + Cessão Onerosa; AIP a partir de mai/2026
+SAPINHOÁ,BM-S-9,verificado: Sapinhoá = bloco BM-S-9
+NORDESTE DE SAPINHOÁ,Entorno Sapinhoá_P2,conferir
+NOROESTE DE SAPINHOÁ,Entorno Sapinhoá_P2,conferir
+SUDOESTE DE SAPINHOÁ,Entorno Sapinhoá_P2,conferir
+LAPA,BM-S-9A,"verificado: BM-S-9A, operado pela TotalEnergies (Relação de Concessionários e mapa da ANP)"
+BACALHAU,BM-S-8,"verificado: licença BM-S-8 (Galp, Equinor)"
+BACALHAU NORTE,Norte de Carcará_P2,"verificado: Bacalhau = licenças BM-S-8 + Norte de Carcará (Galp, out/2025)"
+JUBARTE,BC-60,conferir
+BALEIA AZUL,BC-60,conferir
+BALEIA FRANCA,BC-60,conferir
+BALEIA ANÃ,BC-60,conferir
+CACHALOTE,BC-60,conferir
+PIRAMBU,BC-60,conferir
+ANC_JUBARTE_NORDESTE,UNIAO,conferir
+ANC_JUBARTE_SUDOESTE,UNIAO,conferir
+ARGONAUTA,BC-10,conferir
+OSTRA,BC-10,conferir
+ABALONE,BC-10,conferir
+ANC_ARGONAUTA_ME1,UNIAO,conferir
+PEREGRINO,BM-C-7,conferir
+PITANGOLA,BM-C-7,conferir
+TARTARUGA VERDE,BM-C-36,conferir
+TARTARUGA MESTIÇA,BM-C-36,conferir
+TARTARUGA VERDE SUDOESTE,SO Tartaruga Vd_P5,conferir
+ATLANTA,BS-4,verificado: Atlanta fica no contrato BS-4
+PAPA-TERRA,BC-20,conferir
+BAÚNA,BM-S-40,conferir
+PIRACABA,BM-S-40,conferir
+FRADE,FR,conferir
+ALBACORA LESTE,ABL,conferir
+ALBACORA,AB,conferir
+POLVO,BM-C-8,conferir
+TUBARÃO MARTELO,BM-C-39,verificado: Tubarão Martelo abrange os blocos BM-C-39 e BM-C-40
+WAHOO,BM-C-30,"verificado: Wahoo fica no bloco BM-C-30 (PRIO 64,29% e IBV 35,71% na Relação de Concessionários)"
+MARLIM,MRL,conferir
+MARLIM SUL,MLS,conferir
+MARLIM LESTE,MLL,conferir
+VOADOR,VD,conferir
+RONCADOR,RO,conferir
+ESPADARTE,ESP,conferir
+BARRACUDA,BR,conferir
+CARATINGA,CRT,conferir
+MARIMBÁ,MA,conferir
+CARAPEBA,CRP,conferir
+PARGO,PG,conferir
+VERMELHO,VM,conferir
+PAMPO,PM,conferir
+LINGUADO,LI,conferir
+TRILHA,TR,conferir
+BADEJO,BD,conferir
+BONITO,BO,conferir
+BICUDO,BI,conferir
+ENCHOVA,EN,conferir
+ENCHOVA OESTE,ENO,conferir
+PIRAÚNA,PU,conferir
+BIJUPIRÁ,BJ,conferir
+SALEMA,SA,conferir
+CONGRO,CG,conferir
+CORVINA,CO,conferir
+MALHADO,MLH,conferir
+GAROUPA,GP,conferir
+GAROUPINHA,GPN,conferir
+NAMORADO,NA,conferir
+NORDESTE DE NAMORADO,NEN,conferir
+ANEQUIM,ANQ,conferir
+VIOLA,VL,conferir
+PARATI,PA,conferir

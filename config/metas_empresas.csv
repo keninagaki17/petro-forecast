@@ -1,0 +1,5 @@
+# Metas de produção de petróleo divulgadas pelas empresas, para comparar com o modelo.
+# realizado_ano_anterior_bpd: produção divulgada pela empresa no ano anterior; serve para ajustar o
+# escopo (o modelo cobre só campos marítimos e ~96% da produção oficial; a empresa inclui terra e exterior).
+empresa,ano,meta_bpd,realizado_ano_anterior_bpd,fonte
+Petrobras,2026,2500000,2400000,"Petrobras: 'projetamos produzir 2,5 milhões de barris de petróleo por dia ao longo deste ano' (jan/2026); produção de 2,40 milhões bpd em 2025"

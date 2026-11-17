@@ -1,0 +1,35 @@
+# Brent (US$/bbl, média mensal). "realizado" = dado publicado; "cenario_base" = premissa da previsão.
+# Fontes: FRED/EIA (série MCOILBRENTEU) para o realizado; cenário base montado a partir do STEO da EIA
+# de out/2026 (média de US$ 105 no 4T26 e US$ 84 em 2027). Abr e mai/2026 são aproximados a partir
+# das médias trimestrais publicadas pela EIA. Atualize este arquivo quando quiser mudar a premissa.
+mes,brent_usd,tipo
+2025-11-01,63.80,realizado
+2025-12-01,62.54,realizado
+2026-01-01,66.60,realizado
+2026-02-01,70.89,realizado
+2026-03-01,103.13,realizado
+2026-04-01,117.00,realizado
+2026-05-01,106.40,realizado
+2026-06-01,85.40,realizado
+2026-07-01,83.76,realizado
+2026-08-01,91.08,realizado
+2026-09-01,114.16,realizado
+2026-10-01,123.93,realizado
+2026-11-01,98.00,cenario_base
+2026-12-01,93.00,cenario_base
+2027-01-01,91.00,cenario_base
+2027-02-01,90.00,cenario_base
+2027-03-01,89.00,cenario_base
+2027-04-01,88.00,cenario_base
+2027-05-01,87.00,cenario_base
+2027-06-01,86.00,cenario_base
+2027-07-01,83.00,cenario_base
+2027-08-01,82.00,cenario_base
+2027-09-01,81.00,cenario_base
+2027-10-01,78.00,cenario_base
+2027-11-01,77.00,cenario_base
+2027-12-01,76.00,cenario_base
+2028-01-01,75.00,cenario_base
+2028-02-01,75.00,cenario_base
+2028-03-01,75.00,cenario_base
+2028-04-01,75.00,cenario_base

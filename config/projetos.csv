@@ -1,0 +1,7 @@
+# Plataformas anunciadas publicamente que devem entrar em operação no horizonte da previsão.
+# inicio_cedo / inicio_tarde: janela de 1º óleo considerada (sorteada no Monte Carlo).
+# Verificado em 13/11/2026 com comunicados da Petrobras e imprensa especializada (Agência iNFRA, Brasil Energia, eixos, Band).
+unidade,instalacao,capacidade_bpd,inicio_cedo,inicio_tarde,fonte
+BÚZIOS,P-80 (Búzios 9),225000,2027-02-01,2027-06-01,Saiu de Singapura em 30/09/2026 (~70 dias de viagem); meta 2T27 com chance de antecipar para 1T27
+BÚZIOS,P-82 (Búzios 10),225000,2027-04-01,2027-08-01,Saiu de Singapura em 18/10/2026; meta de 1º óleo no 2T27 / 1º semestre de 2027
+BÚZIOS,P-83 (Búzios 11),225000,2027-09-01,2028-03-01,Sail away previsto para fev/2027 e 1º óleo no 2º semestre de 2027; campanha submarina (Subsea7) começa em out/2027 e entra em 2028

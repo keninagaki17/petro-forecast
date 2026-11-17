@@ -1,0 +1,87 @@
+unidade,h,fatores,variacao_prevista
+ABALONE,6,nº de poços ativos (−6%); produção acumulada (−5%); ritmo recente vs. ano (−4%),-0.1190754207048974
+ALBACORA,6,variação no último mês (+94%); distância do pico histórico (−10%); distância do pico de 2 anos (+9%),1.025160737276853
+ALBACORA LESTE,6,maturidade do campo (+7%); ritmo recente vs. ano (−2%); nº de poços ativos (+2%),0.037427375440329
+ARGONAUTA,6,ritmo recente vs. ano (−4%); meses desde o pico (−3%); variação no último mês (−3%),-0.10154438449218385
+ATAPU,6,produção por poço (+9%); % de água (+4%); variação no último mês (−3%),0.037399173379287984
+ATLANTA,6,aumento da % de água (−4%); variação no último mês (−3%); produção por poço (−2%),-0.14779571975332587
+BACALHAU,6,produção por poço (+6%); % de água (+5%); variação no último mês (+5%),0.36475090203854443
+BALEIA ANÃ,6,nº de poços ativos (−6%); tendência de 3 meses (+6%); variação no último mês (−4%),-0.12050850512583558
+BARRACUDA,6,maturidade do campo (+10%); ritmo recente vs. ano (+7%); nº de poços ativos (+4%),0.3504117496593306
+BAÚNA,6,meses desde o pico (−4%); variação no último mês (−3%); ritmo recente vs. ano (−3%),-0.14869878536723902
+BERBIGÃO/SURURU,6,variação no último mês (−2%); maturidade do campo (−2%); nº de poços ativos (+2%),0.06130247667840509
+BONITO,6,maturidade do campo (+7%); ritmo recente vs. ano (−5%); variação no último mês (−3%),-0.04829076629734412
+BÚZIOS,6,produção por poço (+8%); poços novos (3 meses) (+5%); poços novos (12 meses) (+5%),0.15520435106442226
+CARAPEBA,6,maturidade do campo (+9%); ritmo recente vs. ano (−4%); distância do pico de 2 anos (−3%),-0.005114407496684527
+CARATINGA,6,distância do pico histórico (−13%); maturidade do campo (+11%); tendência de 3 meses (+3%),-0.12361209809907825
+ENCHOVA,6,maturidade do campo (+9%); ritmo recente vs. ano (−4%); variação no último mês (−3%),0.016291685654990954
+ENCHOVA OESTE,6,maturidade do campo (+9%); variação no último mês (−3%); meses desde o pico (−3%),-0.04243059585724865
+ESPADARTE,6,maturidade do campo (+9%); meses desde o pico (−4%); tendência de 3 meses (+3%),0.09422992054792517
+FRADE,6,poços novos (3 meses) (+5%); meses desde o pico (−3%); tendência suavizada (ETS) (+2%),0.05810091350488264
+GOLFINHO,6,maturidade do campo (+12%); distância do pico histórico (+6%); tendência suavizada (ETS) (+4%),0.16711550413810808
+ITAPU,6,produção por poço (+7%); variação no último mês (−2%); tendência suavizada (ETS) (+2%),0.035438427612680005
+JUBARTE,6,maturidade do campo (+6%); poços novos (12 meses) (+6%); poços novos (3 meses) (+3%),0.06600145034186784
+LAPA,6,produção por poço (+4%); ritmo recente vs. ano (−3%); variação no último mês (−3%),-0.02473768137610673
+MARIMBÁ,6,maturidade do campo (+8%); tendência suavizada (ETS) (+2%); meses desde o pico (+2%),0.10143547880269882
+MARLIM,6,maturidade do campo (+7%); poços novos (3 meses) (+7%); tendência suavizada (ETS) (+4%),0.13616275284116056
+MARLIM LESTE,6,variação no último mês (−3%); meses desde o pico (−3%); aumento da % de água (−3%),-0.08508316958486792
+MARLIM SUL,6,maturidade do campo (+8%); variação no último mês (+4%); meses desde o pico (−4%),0.13860812806966785
+MERO,6,produção por poço (+10%); % de água (+4%); distância do pico de 2 anos (−4%),0.1697514219671692
+MEXILHÃO,6,ritmo recente vs. ano (−3%); variação no último mês (−3%); maturidade do campo (−2%),-0.1387785899842029
+OSTRA,6,variação no último mês (−4%); ritmo recente vs. ano (−4%); distância do pico histórico (+2%),-0.06000561888753054
+PAMPO,6,ritmo recente vs. ano (+19%); maturidade do campo (+11%); distância do pico de 2 anos (+5%),0.489413146926182
+PAPA-TERRA,6,poços novos (3 meses) (+5%); meses desde o pico (−4%); variação no último mês (+2%),-0.01448363003353181
+PARGO,6,maturidade do campo (+8%); tendência suavizada (ETS) (+3%); ritmo recente vs. ano (−3%),0.1238240295974838
+PEREGRINO,6,poços novos (3 meses) (+7%); distância do pico de 2 anos (−3%); ritmo recente vs. ano (−2%),-0.007574683666080178
+POLVO,6,variação no último mês (−3%); meses desde o pico (−3%); ritmo recente vs. ano (−2%),-0.017365769748865313
+RONCADOR,6,poços novos (3 meses) (+8%); produção acumulada (−4%); maturidade do campo (+4%),0.011353640464950177
+SAPINHOÁ,6,nº de poços ativos (+2%); variação no último mês (−2%); maturidade do campo (−2%),-0.002050886861929744
+SÉPIA,6,produção por poço (+9%); distância do pico de 2 anos (−3%); variação no último mês (−3%),-0.0018244181136259539
+TARTARUGA VERDE,6,variação no último mês (−3%); nº de poços ativos (+2%); maturidade do campo (−2%),-0.020459371639107923
+TUBARÃO MARTELO,6,meses desde o pico (−4%); variação no último mês (−3%); maturidade do campo (−3%),-0.06456293291670641
+TUPI,6,poços novos (3 meses) (+6%); poços novos (12 meses) (+4%); nº de poços ativos (−2%),0.12825253222179891
+VERMELHO,6,maturidade do campo (+8%); poços novos (3 meses) (+4%); variação no último mês (−3%),0.07233701640063091
+WAHOO,6,% de água (+4%); variação no último mês (−4%); ritmo recente vs. ano (−3%),0.0017321133633832876
+ABALONE,12,nº de poços ativos (−6%); produção acumulada (−5%); ritmo recente vs. ano (−4%),-0.1649263276430827
+ALBACORA,12,variação no último mês (+94%); distância do pico histórico (−10%); maturidade do campo (+9%),0.9339199885130021
+ALBACORA LESTE,12,maturidade do campo (+8%); ritmo recente vs. ano (−2%); nº de poços ativos (+2%),-0.006163946373987963
+ARGONAUTA,12,ritmo recente vs. ano (−4%); meses desde o pico (−4%); variação no último mês (−3%),-0.17659820922787806
+ATAPU,12,produção por poço (+12%); % de água (+4%); variação no último mês (−3%),0.043630167699014274
+ATLANTA,12,aumento da % de água (−5%); variação no último mês (−3%); produção por poço (−3%),-0.2314002175216156
+BACALHAU,12,produção por poço (+7%); % de água (+6%); poços novos (3 meses) (+5%),0.3873035417120941
+BALEIA ANÃ,12,nº de poços ativos (−5%); tendência de 3 meses (+5%); meses desde o pico (−4%),-0.20112352720023305
+BARRACUDA,12,maturidade do campo (+12%); ritmo recente vs. ano (+8%); nº de poços ativos (+4%),0.3296815240036577
+BAÚNA,12,meses desde o pico (−4%); ritmo recente vs. ano (−3%); variação no último mês (−3%),-0.21514503373381572
+BERBIGÃO/SURURU,12,variação no último mês (−2%); maturidade do campo (−2%); aumento da % de água (+2%),0.013319762952858473
+BONITO,12,maturidade do campo (+8%); ritmo recente vs. ano (−5%); variação no último mês (−3%),-0.11721416528740584
+BÚZIOS,12,produção por poço (+10%); poços novos (3 meses) (+6%); poços novos (12 meses) (+5%),0.18195754755672994
+CARAPEBA,12,maturidade do campo (+10%); ritmo recente vs. ano (−4%); distância do pico de 2 anos (−3%),-0.043360916589985324
+CARATINGA,12,distância do pico histórico (−13%); maturidade do campo (+12%); tendência de 3 meses (+3%),-0.1655757084707389
+ENCHOVA,12,maturidade do campo (+11%); ritmo recente vs. ano (−4%); variação no último mês (−3%),-0.022048492947257917
+ENCHOVA OESTE,12,maturidade do campo (+11%); variação no último mês (−3%); meses desde o pico (−3%),-0.1079410124287466
+ESPADARTE,12,maturidade do campo (+13%); meses desde o pico (−4%); tendência suavizada (ETS) (+4%),0.11079535963651793
+FRADE,12,poços novos (3 meses) (+6%); meses desde o pico (−3%); tendência suavizada (ETS) (+3%),0.01705599816365087
+GOLFINHO,12,maturidade do campo (+14%); distância do pico histórico (+6%); tendência suavizada (ETS) (+5%),0.13093277167768433
+ITAPU,12,produção por poço (+8%); variação no último mês (−2%); tendência suavizada (ETS) (+2%),0.0325526057807027
+JUBARTE,12,maturidade do campo (+8%); poços novos (12 meses) (+6%); poços novos (3 meses) (+3%),0.07245520452297671
+LAPA,12,produção por poço (+5%); ritmo recente vs. ano (−4%); tendência suavizada (ETS) (+3%),-0.04353013990201145
+MARIMBÁ,12,maturidade do campo (+9%); tendência suavizada (ETS) (+3%); meses desde o pico (+3%),0.08286687993216629
+MARLIM,12,maturidade do campo (+8%); poços novos (3 meses) (+8%); variação no último mês (−3%),0.11869412452012022
+MARLIM LESTE,12,variação no último mês (−3%); meses desde o pico (−3%); aumento da % de água (−3%),-0.14152369639054146
+MARLIM SUL,12,maturidade do campo (+10%); meses desde o pico (−4%); variação no último mês (+4%),0.09679957529434927
+MERO,12,produção por poço (+14%); % de água (+6%); tendência suavizada (ETS) (+5%),0.2928257634443693
+MEXILHÃO,12,ritmo recente vs. ano (−4%); variação no último mês (−3%); meses desde o pico (−3%),-0.19514207659320876
+OSTRA,12,ritmo recente vs. ano (−4%); variação no último mês (−3%); meses desde o pico (−2%),-0.125162860269858
+PAMPO,12,ritmo recente vs. ano (+20%); maturidade do campo (+12%); distância do pico de 2 anos (+5%),0.46226920929338744
+PAPA-TERRA,12,poços novos (3 meses) (+6%); meses desde o pico (−4%); ritmo recente vs. ano (−2%),-0.0687272620735075
+PARGO,12,maturidade do campo (+9%); ritmo recente vs. ano (−3%); tendência suavizada (ETS) (+3%),0.06813168398171839
+PEREGRINO,12,poços novos (3 meses) (+8%); distância do pico de 2 anos (−3%); nº de poços ativos (+2%),-0.048606356825573786
+POLVO,12,meses desde o pico (−3%); variação no último mês (−3%); ritmo recente vs. ano (−2%),-0.07919440391319102
+RONCADOR,12,poços novos (3 meses) (+10%); produção acumulada (−5%); maturidade do campo (+5%),-0.009012100485381182
+SAPINHOÁ,12,nº de poços ativos (+3%); maturidade do campo (−2%); variação no último mês (−2%),-0.03435398061459288
+SÉPIA,12,produção por poço (+13%); distância do pico de 2 anos (−3%); ritmo recente vs. ano (−3%),0.0015532948681592908
+TARTARUGA VERDE,12,variação no último mês (−3%); maturidade do campo (−2%); nº de poços ativos (+2%),-0.08975356304470605
+TUBARÃO MARTELO,12,meses desde o pico (−5%); variação no último mês (−3%); ritmo recente vs. ano (+3%),-0.10964442620300352
+TUPI,12,poços novos (3 meses) (+7%); poços novos (12 meses) (+4%); nº de poços ativos (−2%),0.11362662951677356
+VERMELHO,12,maturidade do campo (+9%); poços novos (3 meses) (+4%); variação no último mês (−3%),0.045249852771056455
+WAHOO,12,% de água (+5%); variação no último mês (−4%); ritmo recente vs. ano (−3%),-0.03929942612733543

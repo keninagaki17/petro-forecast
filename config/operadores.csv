@@ -1,0 +1,33 @@
+# Operadora de cada unidade de previsão (operadora = quem opera, não a fatia de cada sócio).
+# status: "conferir" = montado a partir de informação pública e ainda não validado.
+# Unidades fora da lista aparecem como "Outras".
+unidade,operador,status
+BÚZIOS,Petrobras,conferir
+TUPI,Petrobras,conferir
+MERO,Petrobras,conferir
+JUBARTE,Petrobras,conferir
+BERBIGÃO/SURURU,Petrobras,conferir
+SÉPIA,Petrobras,conferir
+MARLIM,Petrobras,conferir
+ITAPU,Petrobras,conferir
+SAPINHOÁ,Petrobras,conferir
+MARLIM SUL,Petrobras,conferir
+ATAPU,Petrobras,conferir
+RONCADOR,Petrobras,conferir
+MARLIM LESTE,Petrobras,conferir
+TARTARUGA VERDE,Petrobras,conferir
+BARRACUDA,Petrobras,conferir
+LAPA,TotalEnergies,conferir
+BACALHAU,Equinor,conferir
+PEREGRINO,PRIO,conferir
+WAHOO,PRIO,conferir
+FRADE,PRIO,conferir
+ALBACORA LESTE,PRIO,conferir
+POLVO,PRIO,conferir
+TUBARÃO MARTELO,PRIO,conferir
+ATLANTA,Brava,conferir
+PAPA-TERRA,Brava,conferir
+ARGONAUTA,Shell,conferir
+OSTRA,Shell,conferir
+ABALONE,Shell,conferir
+BAÚNA,Karoon,conferir

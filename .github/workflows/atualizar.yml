@@ -1,0 +1,29 @@
+# Atualização mensal automática: baixa os dados, roda o modelo e publica as saídas no repositório.
+# O painel (Streamlit Community Cloud) se atualiza sozinho a cada commit.
+name: atualizar-previsao
+on:
+  schedule:
+    - cron: "0 12 20 * *"   # todo dia 20, 09h de Brasília
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python coleta_dados.py --desde 2005
+      - run: python rodar_modelo.py
+      - run: python painel_dados.py saidas saidas/painel
+      - name: Publicar saídas
+        run: |
+          git config user.name "robo-previsao"
+          git config user.email "robo-previsao@users.noreply.github.com"
+          git add saidas/
+          git commit -m "Atualização mensal $(date +%Y-%m)" || echo "nada mudou"
+          git push
