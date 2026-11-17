@@ -1,0 +1,9 @@
+metodo,wape_pct,erro_carteira_pct,vies_pct
+Modelo final (ML + plataformas novas),13.2,5.2,-2.7
+ML (LightGBM híbrido + teto de capacidade),15.2,7.5,-6.4
+Ingênuo + plataformas novas,15.3,5.5,-1.9
+ML + ingênuo nos meses iniciais,15.4,7.4,-6.3
+Ingênuo (repete o último mês),17.9,7.2,-5.5
+Média dos últimos 3 meses,18.0,7.5,-6.2
+Suavização exponencial (ETS),18.0,7.6,-5.7
+Curva de declínio (Arps) da unidade,19.1,12.4,-12.4

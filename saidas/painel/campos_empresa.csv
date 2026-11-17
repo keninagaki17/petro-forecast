@@ -1,0 +1,99 @@
+empresa,unidade
+Total,ABALONE
+Total,ALBACORA
+Total,ALBACORA LESTE
+Total,ARGONAUTA
+Total,ATAPU
+Total,ATLANTA
+Total,BACALHAU
+Total,BALEIA ANÃ
+Total,BARRACUDA
+Total,BAÚNA
+Total,BERBIGÃO/SURURU
+Total,BONITO
+Total,BÚZIOS
+Total,CARAPEBA
+Total,CARATINGA
+Total,ENCHOVA
+Total,ENCHOVA OESTE
+Total,ESPADARTE
+Total,FRADE
+Total,GOLFINHO
+Total,ITAPU
+Total,JUBARTE
+Total,LAPA
+Total,MARIMBÁ
+Total,MARLIM
+Total,MARLIM LESTE
+Total,MARLIM SUL
+Total,MERO
+Total,MEXILHÃO
+Total,OSTRA
+Total,PAMPO
+Total,PAPA-TERRA
+Total,PARGO
+Total,PEREGRINO
+Total,POLVO
+Total,RONCADOR
+Total,SAPINHOÁ
+Total,SÉPIA
+Total,TARTARUGA VERDE
+Total,TUBARÃO MARTELO
+Total,TUPI
+Total,VERMELHO
+Total,WAHOO
+Shell,ABALONE
+Petrobras,ALBACORA
+PRIO,ALBACORA LESTE
+Repsol Sinopec,ALBACORA LESTE
+Shell,ARGONAUTA
+Petrobras,ATAPU
+Shell,ATAPU
+TotalEnergies,ATAPU
+Equinor,BACALHAU
+Galp,BACALHAU
+Petrobras,BALEIA ANÃ
+Petrobras,BARRACUDA
+Galp,BERBIGÃO/SURURU
+Petrobras,BERBIGÃO/SURURU
+Shell,BERBIGÃO/SURURU
+TotalEnergies,BERBIGÃO/SURURU
+CNOOC,BÚZIOS
+CNPC,BÚZIOS
+Petrobras,BÚZIOS
+Petrobras,CARATINGA
+Petrobras,ESPADARTE
+Petronas,ESPADARTE
+PRIO,FRADE
+Petrobras,ITAPU
+Petrobras,JUBARTE
+Repsol Sinopec,LAPA
+Shell,LAPA
+TotalEnergies,LAPA
+Petrobras,MARLIM
+Petrobras,MARLIM LESTE
+Petrobras,MARLIM SUL
+CNOOC,MERO
+CNPC,MERO
+Petrobras,MERO
+Shell,MERO
+TotalEnergies,MERO
+Shell,OSTRA
+Equinor,PEREGRINO
+PRIO,PEREGRINO
+PRIO,POLVO
+Equinor,RONCADOR
+Petrobras,RONCADOR
+Petrobras,SAPINHOÁ
+Repsol Sinopec,SAPINHOÁ
+Shell,SAPINHOÁ
+Petrobras,SÉPIA
+Petronas,SÉPIA
+TotalEnergies,SÉPIA
+Petrobras,TARTARUGA VERDE
+Petronas,TARTARUGA VERDE
+PRIO,TUBARÃO MARTELO
+Galp,TUPI
+Petrobras,TUPI
+Shell,TUPI
+PRIO,WAHOO

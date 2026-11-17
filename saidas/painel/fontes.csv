@@ -1,0 +1,9 @@
+ordem,premissa,valor,fonte
+1,Brent,US$ 124 em 10/2026 (realizado) → US$ 75 em 03/2028; média de 12 meses US$ 91,Realizado: EIA/FRED (série MCOILBRENTEU). Cenário: STEO da EIA de out/2026. Faixa P10–P90: choques históricos de preço sorteados (Monte Carlo).
+2,Câmbio,"R$ 5,13 (último PTAX, 10/2026), sem tendência; a faixa vem de choques históricos",Banco Central (PTAX médio mensal).
+3,Preço do petróleo de cada campo,"Brent × 0,91 × fator do campo (qualidade do óleo) × câmbio","Preço de referência da ANP por campo, publicado até 2025-12; depois disso, a relação média com o Brent."
+4,Gás natural,"Preço de referência recente de cada campo, mantido constante; volume na proporção gás/óleo dos últimos 12 meses",ANP (preço de referência do gás natural).
+5,Royalties,"Receita × alíquota do campo (10% a 15%) × 0,977; erro médio de 1,8% ao mês contra o arrecadado desde 2022",ANP (royalties distribuídos) e alíquotas dos contratos.
+6,Produção,"Modelo LightGBM por grupo de campos, com teto de capacidade das plataformas; 43 grupos","ANP, produção por poço até 09/2026."
+7,Plataformas novas,"P-80: 1º óleo entre 02/2027 e 06/2027, 225 mil bbl/d; P-82: 1º óleo entre 04/2027 e 08/2027, 225 mil bbl/d; P-83: 1º óleo entre 09/2027 e 03/2028, 225 mil bbl/d",Comunicados da Petrobras e imprensa especializada (conferido em 13/11/2026).
+8,Parte de cada empresa,"Participação no contrato de cada campo, ajustada pelos acordos de individualização em vigor",ANP (Relação de Concessionários) e acordos de individualização da produção.
