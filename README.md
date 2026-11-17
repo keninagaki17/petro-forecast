@@ -2,7 +2,7 @@
 
 Projeto pessoal de Ken Vasconcelos, feito só com dados públicos (ANP, Banco Central e EIA).
 
-**Painel interativo:** https://claude.ai/artifact/9EtkViuifarM7LAsJbWqcf
+**Painel interativo:** https://keninagaki17.github.io/petro-forecast/ (abre sem login)
 
 Todo mês, um robô (GitHub Actions) baixa os dados da ANP, roda o modelo, guarda a previsão feita e compara
 as previsões anteriores com o que de fato aconteceu. O painel mostra:
@@ -136,9 +136,19 @@ comparação previsto × realizado e `painel_dados.py` (gera `saidas/painel/*.js
 governo bloquearem o robô, rode `coleta_dados.py` no seu PC e envie a pasta
 `dados_brutos/` para o repositório.
 
+### Site público (GitHub Pages)
+
+A pasta `site/` tem o painel em HTML, CSS e JavaScript (d3). `.github/workflows/site.yml` monta o site com
+os arquivos de `saidas/painel/json/` e publica no GitHub Pages. Ele roda no fim da atualização mensal e
+sempre que `site/` muda. `site/js/runtime.js` carrega os dados e redesenha os gráficos quando o usuário
+mexe nos filtros.
+
+Para testar no computador: copie `saidas/painel/json/*.json` para `site/data/` e rode
+`python -m http.server` dentro de `site/`.
+
 ### Painel no Claude
 
-O painel publicado no Claude lê arquivos anexados, não o GitHub. Uma tarefa agendada no Claude, no dia 21 de
+Há também uma cópia do painel no Claude. Ela lê arquivos anexados, não o GitHub. Uma tarefa agendada no Claude, no dia 21 de
 cada mês (depois do robô do dia 20), copia os arquivos de `saidas/painel/json/` do repositório para o painel.
 A lista de arquivos e datasets está em `config/painel_datasets.json`. Para isso o repositório precisa ser
 público (ou o GitHub estar conectado ao Claude).

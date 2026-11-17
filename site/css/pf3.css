@@ -1,0 +1,44 @@
+/* Visual de relatório: menos caixas, mais tipografia e réguas */
+.pf{max-width:1180px}
+.pf-masthead{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);border-bottom:1px solid var(--color-fg);padding-bottom:6px;margin-bottom:var(--cds-gap-md)}
+.pf-masthead b{color:var(--color-fg);font-weight:var(--cds-font-weight-medium)}
+.pf-title{font-size:clamp(1.6rem,4.4vw,2.6rem);line-height:1.08;letter-spacing:-.01em;max-width:22ch;margin:.1em 0 .35em}
+.pf-lede{font-size:clamp(1rem,1.6vw,1.1rem);max-width:62ch;color:var(--color-fg)}
+
+/* abas: texto com sublinhado, sem cápsula */
+.pf-tabs{gap:0;padding:0;border:0;border-bottom:1px solid var(--color-border-line);border-radius:0;background:var(--color-bg);margin:var(--cds-gap-lg) 0 var(--cds-gap-lg)}
+.pf-tab{border-radius:0;padding:10px 14px 9px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.pf-tab:first-child{padding-left:0}
+.pf-tab.on{background:transparent;box-shadow:none;border-bottom-color:var(--color-fg)}
+
+/* blocos sem moldura: régua no topo, como seções de um relatório */
+.pf-lay{gap:var(--cds-gap-xl) var(--cds-gap-lg)}
+.pf-card{background:transparent;border:0;border-top:1px solid var(--color-border-line);border-radius:0;padding:var(--cds-pad-md) 0 0}
+.pf-h2{font-family:var(--font-anthropic-serif);font-weight:400;font-size:clamp(1.15rem,2vw,1.35rem);line-height:1.25;margin-bottom:4px}
+.pf-h3{text-transform:none;letter-spacing:0}
+.pf-tw{margin:0;padding:0}
+.pf-table th:first-child,.pf-table td:first-child{background:var(--color-bg)}
+.pf-table tbody tr:hover td{background:color-mix(in srgb,var(--color-fg) 4%,var(--color-bg))}
+.pf-table tbody tr.sel td{background:color-mix(in srgb,var(--color-fg) 8%,var(--color-bg))}
+
+/* controles discretos */
+.pf-seg{border:0;padding:0;gap:14px;border-radius:0}
+.pf-seg button{padding:4px 0;border-radius:0;border-bottom:2px solid transparent}
+.pf-seg button.on{background:transparent;box-shadow:none;border-bottom-color:var(--color-fg);color:var(--color-fg)}
+.pf-chip{padding:0;background:none!important;border-radius:0}
+.pf-btn{border:0;border-bottom:1px solid currentColor;border-radius:0;padding:2px 0;color:var(--color-fg-muted)}
+.pf-res{background:transparent;border-left:2px solid var(--color-fg);border-radius:0;padding:2px 0 2px var(--cds-pad-sm)}
+.pf-n{border-top:0;padding-top:0}
+.pf-trio{border-top:1px solid var(--color-border-line);border-bottom:1px solid var(--color-border-line);padding:var(--cds-pad-md) 0}
+.pf-card .pf-trio{border-bottom:0;padding-bottom:0}
+.pf-mais>summary{border-top:1px solid var(--color-border-line);padding-top:var(--cds-pad-md)}
+
+/* royalties */
+.pf-stf{border-left:2px solid var(--color-fg);padding:2px 0 2px var(--cds-pad-md);max-width:70ch}
+.pf-stf p{margin:0 0 var(--cds-gap-sm);line-height:1.55}
+.pf-stf small{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
+.pf-conf{font-size:var(--cds-font-size-caption)}
+.pf-conf.boa{color:var(--color-ok)}
+.pf-conf.media{color:var(--color-warn)}
+.pf-conf.baixa{color:var(--color-bad)}
+.pf-autor{margin-top:var(--cds-gap-xl);font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);max-width:70ch;line-height:1.5}

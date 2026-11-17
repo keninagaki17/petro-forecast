@@ -1,0 +1,54 @@
+/* Tokens de cor, tipografia e espaçamento usados pelo painel (versão pública, fora do Claude) */
+:root{
+  color-scheme:light dark;
+  --font-anthropic-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-anthropic-serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --color-bg:#fcfcfb;
+  --color-panel:#f4f3ef;
+  --color-fg:#0b0b0b;
+  --color-fg-muted:#52514e;
+  --color-border-line:#e1e0d9;
+  --color-ok:#006300;
+  --color-bad:#c22f2f;
+  --color-warn:#a86a00;
+  --cds-text-secondary:#52514e;
+  --cds-chart-muted:#a3a29b;
+  --cds-chart-grid:#e1e0d9;
+  --cds-chart-axis:#c3c2b7;
+  --cds-chart-reference:#898781;
+  --cds-surface-popover:#ffffff;
+  --cds-border:#e1e0d9;
+  --cds-shadow-popover:0 4px 16px rgba(0,0,0,.10);
+  --c0:#2a78d6;--c1:#eb6834;--c2:#1baf7a;--c3:#eda100;--c4:#e87ba4;--c5:#6250d6;
+  --cds-font-size-caption:.8125rem;
+  --cds-font-size-body:.9375rem;
+  --cds-font-size-heading:1.0625rem;
+  --cds-font-weight-medium:600;
+  --cds-gap-sm:8px;--cds-gap-md:16px;--cds-gap-lg:24px;--cds-gap-xl:40px;
+  --cds-pad-sm:8px;--cds-pad-md:14px;--cds-pad-lg:20px;
+  --cds-radius:8px;
+  --cds-dur-slow:.4s;--cds-ease-out:cubic-bezier(.2,.7,.2,1);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --color-bg:#1a1a19;--color-panel:#232321;--color-fg:#f0efec;--color-fg-muted:#c3c2b7;--color-border-line:#383835;
+    --color-ok:#0ca30c;--color-bad:#e66767;--color-warn:#fab219;
+    --cds-text-secondary:#c3c2b7;--cds-chart-muted:#6b6a65;--cds-chart-grid:#2c2c2a;--cds-chart-axis:#383835;--cds-chart-reference:#898781;
+    --cds-surface-popover:#2a2a28;--cds-border:#383835;--cds-shadow-popover:0 4px 16px rgba(0,0,0,.5);
+    --c0:#3987e5;--c1:#d95926;--c2:#199e70;--c3:#c98500;--c4:#d55181;--c5:#9085e9;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--color-bg);color:var(--color-fg);font-family:var(--font-anthropic-sans);font-size:var(--cds-font-size-body);line-height:1.45}
+.pf{margin:0 auto;padding:clamp(16px,4vw,40px) clamp(14px,4vw,36px) 48px}
+.pf a{color:inherit}
+select.dash-select{font:inherit;font-size:var(--cds-font-size-body);color:var(--color-fg);background:var(--color-bg);border:1px solid var(--color-border-line);border-radius:6px;padding:6px 28px 6px 10px;appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--color-fg-muted) 50%),linear-gradient(135deg,var(--color-fg-muted) 50%,transparent 50%);
+  background-position:calc(100% - 15px) 55%,calc(100% - 10px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+.dash-skeleton{min-height:200px;border-radius:6px;background:linear-gradient(90deg,var(--color-panel) 0%,color-mix(in srgb,var(--color-panel) 40%,var(--color-bg)) 50%,var(--color-panel) 100%);background-size:200% 100%;animation:pfSk 1.2s linear infinite}
+@keyframes pfSk{from{background-position:200% 0}to{background-position:-200% 0}}
+button{font:inherit}
+button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--c0);outline-offset:2px}
+.pf-site{margin-top:var(--cds-gap-xl);font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);line-height:1.6}
+.pf-site a{color:var(--color-fg)}

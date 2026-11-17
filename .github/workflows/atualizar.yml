@@ -1,5 +1,5 @@
 # Atualização mensal automática: baixa os dados, roda o modelo e publica as saídas no repositório.
-# O painel (Streamlit Community Cloud) se atualiza sozinho a cada commit.
+# Depois publica o site (GitHub Pages) com os dados novos.
 name: atualizar-previsao
 on:
   schedule:
@@ -27,3 +27,10 @@ jobs:
           git add saidas/
           git commit -m "Atualização mensal $(date +%Y-%m)" || echo "nada mudou"
           git push
+  site:
+    needs: atualizar
+    uses: ./.github/workflows/site.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

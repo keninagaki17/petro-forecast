@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Petróleo no mar do Brasil: previsão de produção, receita e royalties · Ken Vasconcelos</title>
+<meta name="description" content="Previsão mensal da produção de petróleo no mar do Brasil, campo a campo, com receita por empresa e royalties por estado e município. Compara o que foi previsto com o que a ANP publicou depois. Só dados públicos, atualizado todo mês.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Petróleo no mar do Brasil: o que foi previsto, o que aconteceu e o que vem">
+<meta property="og:description" content="Previsão de produção, receita e royalties com dados públicos da ANP, comparada todo mês com o realizado.">
+<meta property="og:url" content="https://keninagaki17.github.io/petro-forecast/">
+<meta property="og:image" content="https://keninagaki17.github.io/petro-forecast/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 24 L12 15 L18 19 L28 7' fill='none' stroke='%232a78d6' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/pf.css">
+<link rel="stylesheet" href="css/pf2.css">
+<link rel="stylesheet" href="css/pf3.css">
+</head>
+<body>
+<div class="pf">
+  <header id="topo">
+    <div class="pf-masthead"><span><b>Ken Vasconcelos</b> · projeto pessoal com dados públicos</span><span>Produção publicada até <span data-draw="ateMes" data-source="historico">—</span> · atualizado todo mês</span></div>
+    <h1 class="pf-title">Petróleo no mar do Brasil: o que foi previsto, o que aconteceu e o que vem</h1>
+    <p class="pf-lede" id="resumo">O modelo prevê, todo mês, a produção de cada campo e a parte de cada empresa nela. A página compara essas previsões com o que a ANP publicou depois e mostra quanto isso significa em receita para as empresas e em royalties para estados e municípios.</p>
+  </header>
+
+  <nav class="pf-tabs" id="abas" role="tablist" aria-label="Seções do painel">
+    <button class="pf-tab on" data-tab="previsao" role="tab" aria-selected="true">Previsão</button>
+    <button class="pf-tab" data-tab="royalties" role="tab" aria-selected="false">Royalties</button>
+    <button class="pf-tab" data-tab="premissas" role="tab" aria-selected="false">Premissas</button>
+    <button class="pf-tab" data-tab="socios" role="tab" aria-selected="false">Sócios</button>
+    <button class="pf-tab" data-tab="plataformas" role="tab" aria-selected="false">Plataformas</button>
+    <button class="pf-tab" data-tab="campos" role="tab" aria-selected="false">Campos</button>
+  </nav>
+
+  <section class="pf-sec" id="previsao">
+    <div class="pf-ctrls" id="controles">
+      <div class="pf-ctl pf-ctl-in"><span class="pf-ctl-h"><span>Mostrar</span></span>
+        <div class="pf-seg" id="metrica" role="group" aria-label="O que mostrar no gráfico">
+          <button data-m="producao" class="on">Produção</button>
+          <button data-m="receita">Receita</button>
+          <button data-m="royalties">Royalties</button>
+        </div></div>
+      <label class="pf-ctl pf-ctl-in"><span class="pf-ctl-h"><span>Empresa</span></span>
+        <select class="dash-select pf-sel" id="sel-empresa-prev" aria-label="Empresa" data-draw="selEmpP" data-source="pesos"></select></label>
+      <label class="pf-ctl pf-ctl-in"><span class="pf-ctl-h"><span>Campo</span></span>
+        <select class="dash-select pf-sel" id="sel-campo-prev" aria-label="Campo" data-draw="selCf" data-source="pesos sim_unidades"></select></label>
+      <div class="pf-ctl pf-ctl-in"><span class="pf-ctl-h"><span>Comparar com a previsão feita</span></span>
+        <div class="pf-seg" id="antecedencia" role="group" aria-label="Antecedência da previsão passada">
+          <button data-h="1">1 mês antes</button>
+          <button data-h="3">3 meses</button>
+          <button data-h="6" class="on">6 meses</button>
+          <button data-h="12">12 meses</button>
+        </div></div>
+    </div>
+
+    <div class="pf-trio pf-gap" id="acerto">
+      <div class="pf-n" id="ac-ultimo"><div class="pf-n-l">Último mês publicado: <span data-draw="akv" data-fmt="mes" data-source="acerto" data-field="mes">—</span></div>
+        <div class="pf-n-v"><span data-draw="akv" data-fmt="mv" data-source="acerto" data-field="real">—</span><span class="pf-kpi-u" data-draw="unidM">—</span></div>
+        <div class="pf-n-s">Previsto: <b data-draw="akv" data-fmt="mv" data-source="acerto" data-field="previsto">—</b> · desvio <span class="pf-chip" data-draw="akv" data-fmt="pct" data-source="acerto" data-field="desvio_pct">—</span></div></div>
+      <div class="pf-n" id="ac-erro"><div class="pf-n-l">Erro médio das previsões · últimos 12 meses</div>
+        <div class="pf-n-v"><span data-draw="akv" data-fmt="f1" data-source="acerto" data-field="erro12">—</span><span class="pf-kpi-u">%</span></div>
+        <div class="pf-n-s">Repetir o último mês erraria <b data-draw="akv" data-fmt="f1" data-source="acerto" data-field="erro12_ingenuo">—</b>%</div></div>
+      <div class="pf-n" id="ac-vies"><div class="pf-n-l">Tendência do erro · últimos 12 meses</div>
+        <div class="pf-n-v"><span data-draw="akv" data-fmt="pct" data-source="acerto" data-field="vies12">—</span></div>
+        <div class="pf-n-s">Negativo: o modelo previu menos do que aconteceu</div></div>
+    </div>
+
+    <div class="pf-lay">
+      <div class="pf-card" id="card-previsao">
+        <h2 class="pf-h2"><span data-draw="metNome">—</span> de <span data-draw="empNome">—</span>: previsto × realizado e próximos 18 meses</h2>
+        <p class="pf-sub" data-draw="metSub">—</p>
+        <div class="pf-legend">
+          <span><i class="pf-sw ln" data-c="0"></i>Realizado</span>
+          <span><i class="pf-sw ln dot" data-c="1"></i>Previsto meses antes</span>
+          <span><i class="pf-sw ln dash" data-c="1"></i>Previsão do modelo</span>
+          <span><i class="pf-sw band" data-c="1"></i>Faixa P10–P90</span>
+          <span><i class="pf-sw ln" data-c="2"></i>Seu cenário</span>
+        </div>
+        <div class="pf-chart tall" id="graf-previsao" data-draw="chPrev" data-source="historico central cenario_mes hist_campos central_campos">—</div>
+        <p class="pf-note pf-aviso" data-draw="cenNota"></p>
+      </div>
+
+      <div class="pf-card pf-w4" id="card-premissas">
+        <h2 class="pf-h2">Premissas do seu cenário</h2>
+        <p class="pf-sub">Valem para a empresa escolhida no alto da página.</p>
+        <p class="pf-res" id="cen-resumo">Seu cenário em 12 meses: <b data-draw="ckv" data-fmt="f0" data-source="cenario12" data-field="prod_s">—</b> mil bbl/d · receita R$ <b data-draw="ckv" data-fmt="f1" data-source="cenario12" data-field="receita_s">—</b> bi <span class="pf-chip" data-draw="ckv" data-fmt="s1" data-good="up" data-source="cenario12" data-field="d_receita">—</span></p>
+        <h3 class="pf-h3">Preço: muda a receita, não a produção</h3>
+        <label class="pf-ctl"><span class="pf-ctl-h"><span>Brent médio em 12 meses</span><b>US$ <span data-draw="kv" data-fmt="f1" data-source="premissas" data-field="valor" data-where="k=brent">—</span></b></span>
+          <input type="range" class="pf-range" data-p="brent_pct" min="-40" max="40" step="1" value="0" aria-label="Brent: variação percentual sobre a previsão do modelo"></label>
+        <label class="pf-ctl"><span class="pf-ctl-h"><span>Câmbio médio em 12 meses</span><b>R$ <span data-draw="kv" data-fmt="f2" data-source="premissas" data-field="valor" data-where="k=cambio">—</span></b></span>
+          <input type="range" class="pf-range" data-p="cambio_pct" min="-20" max="20" step="1" value="0" aria-label="Câmbio: variação percentual sobre a previsão do modelo"></label>
+        <h3 class="pf-h3 pf-gap">Volume: muda a produção e a receita</h3>
+        <label class="pf-ctl"><span class="pf-ctl-h"><span>Produção dos campos atuais</span><b data-draw="kv" data-fmt="p0" data-source="premissas" data-field="valor" data-where="k=vol">—</b></span>
+          <input type="range" class="pf-range" data-p="vol_pct" min="-15" max="15" step="1" value="0" aria-label="Produção dos campos atuais: variação percentual"></label>
+        <label class="pf-ctl"><span class="pf-ctl-h"><span>Atraso das plataformas novas</span><b><span data-draw="kv" data-fmt="f0" data-source="premissas" data-field="valor" data-where="k=atraso">—</span> meses</b></span>
+          <input type="range" class="pf-range" data-p="atraso" min="0" max="12" step="1" value="0" aria-label="Atraso da P-80, P-82 e P-83, em meses"></label>
+        <h3 class="pf-h3 pf-gap">Ajuste a previsão de um campo</h3>
+        <label class="pf-ctl"><span class="pf-ctl-h"><span>Campo</span></span>
+          <select class="dash-select pf-sel" id="sel-campo-aj" aria-label="Campo a ajustar" data-draw="selCampo" data-source="pesos sim_unidades"></select></label>
+        <label class="pf-ctl"><span class="pf-ctl-h"><span>Produção do campo</span><b data-draw="kv" data-fmt="p0" data-source="premissas" data-field="valor" data-where="k=campo">—</b></span>
+          <input type="range" class="pf-range" data-p="campo_pct" min="-30" max="30" step="1" value="0" aria-label="Ajuste percentual da produção do campo escolhido"></label>
+        <button class="pf-btn" data-reset="cen" id="cen-reset">Voltar à previsão do modelo</button>
+      </div>
+
+      <div class="pf-card pf-w8" id="card-resultado">
+        <h2 class="pf-h2">Próximos 12 meses: modelo × seu cenário</h2>
+        <p class="pf-sub"><span data-draw="empNome">—</span>. Parte da empresa em cada campo.</p>
+        <div class="pf-trio">
+          <div class="pf-n"><div class="pf-n-l">Produção (mil bbl/d)</div>
+            <div class="pf-n-v" data-draw="ckv" data-fmt="f0" data-source="cenario12" data-field="prod_s">—</div>
+            <div class="pf-n-s">Modelo <b data-draw="ckv" data-fmt="f0" data-source="cenario12" data-field="prod_c">—</b> · <span class="pf-chip" data-draw="ckv" data-fmt="s0" data-good="up" data-source="cenario12" data-field="d_prod">—</span></div></div>
+          <div class="pf-n"><div class="pf-n-l">Receita bruta (R$ bi)</div>
+            <div class="pf-n-v" data-draw="ckv" data-fmt="f1" data-source="cenario12" data-field="receita_s">—</div>
+            <div class="pf-n-s">Modelo <b data-draw="ckv" data-fmt="f1" data-source="cenario12" data-field="receita_c">—</b> · <span class="pf-chip" data-draw="ckv" data-fmt="s1" data-good="up" data-source="cenario12" data-field="d_receita">—</span></div></div>
+          <div class="pf-n"><div class="pf-n-l">Royalties (R$ bi)</div>
+            <div class="pf-n-v" data-draw="ckv" data-fmt="f1" data-source="cenario12" data-field="royalties_s">—</div>
+            <div class="pf-n-s">Modelo <b data-draw="ckv" data-fmt="f1" data-source="cenario12" data-field="royalties_c">—</b> · <span class="pf-chip" data-draw="ckv" data-fmt="s1" data-good="up" data-source="cenario12" data-field="d_royalties">—</span></div></div>
+        </div>
+      </div>
+
+    </div>
+    <details class="pf-mais" id="mais-detalhes"><summary>Mais detalhes <span>· campo a campo, riscos, efeito em cada empresa e por que este modelo</span></summary>
+    <div class="pf-lay">
+      <div class="pf-card pf-w7" id="card-campos-ultimo">
+        <h2 class="pf-h2">Campo a campo no último mês</h2>
+        <p class="pf-sub">Campos da empresa escolhida, produção total do campo em mil bbl/d. Desvio = realizado menos previsto. Última coluna: erro acumulado em 12 meses.</p>
+        <div class="pf-tw">
+          <table class="pf-table pf-fixa" id="tab-pr" data-source="pr_campos" data-row-key="unidade,h">
+            <thead><tr>
+              <th data-field="unidade" class="txt">Campo</th>
+              <th data-field="previsto">Previsto</th>
+              <th data-field="real">Realizado</th>
+              <th data-field="desvio">Desvio</th>
+              <th data-field="desvio_pct">Desvio %</th>
+              <th data-field="erro12">Erro 12m</th>
+            </tr></thead>
+            <tbody data-draw="tbCampos"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="pf-card pf-w5" id="card-riscos">
+        <h2 class="pf-h2">O que mais pesa para <span data-draw="empNome">—</span></h2>
+        <p class="pf-sub">Efeito em 12 meses de cada risco, isolado, sobre a previsão do modelo</p>
+        <ul class="pf-risks">
+          <li><span>Brent US$ <b data-draw="cst" data-k="brent">—</b> abaixo</span>
+            <span class="pf-r-v">receita <b data-draw="kv" data-fmt="s1" data-source="riscos" data-field="receita" data-where="risco=brent">—</b> R$ bi</span></li>
+          <li><span>Câmbio R$ <b data-draw="cst" data-k="cambio">—</b> abaixo</span>
+            <span class="pf-r-v">receita <b data-draw="kv" data-fmt="s1" data-source="riscos" data-field="receita" data-where="risco=cambio">—</b> R$ bi</span></li>
+          <li><span>P-80, P-82 e P-83 atrasam <b data-draw="cst" data-k="atraso">—</b> meses</span>
+            <span class="pf-r-v">produção <b data-draw="kv" data-fmt="s0" data-source="riscos" data-field="producao" data-where="risco=atraso">—</b> mil bbl/d · receita <b data-draw="kv" data-fmt="s1" data-source="riscos" data-field="receita" data-where="risco=atraso">—</b> R$ bi</span></li>
+          <li><span>Produção no piso da faixa (P10)</span>
+            <span class="pf-r-v">produção <b data-draw="kv" data-fmt="s0" data-source="riscos" data-field="producao" data-where="risco=p10">—</b> mil bbl/d · receita <b data-draw="kv" data-fmt="s1" data-source="riscos" data-field="receita" data-where="risco=p10">—</b> R$ bi</span></li>
+        </ul>
+      </div>
+
+      <div class="pf-card pf-w7" id="card-cen-empresas">
+        <h2 class="pf-h2">Seu cenário para cada empresa</h2>
+        <p class="pf-sub">Receita bruta de 12 meses da parte de cada sócio, R$ bilhões. Toque numa linha para ver a empresa.</p>
+        <div class="pf-tw">
+          <table class="pf-table pf-fixa" id="tab-cen" data-source="cenario12" data-row-key="empresa">
+            <thead><tr>
+              <th data-field="empresa" class="txt">Empresa</th>
+              <th data-field="receita_c">Modelo</th>
+              <th data-field="receita_s">Seu cenário</th>
+              <th data-field="d_receita">Diferença</th>
+              <th data-field="var_pct">Variação</th>
+            </tr></thead>
+            <tbody data-draw="tbCen"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="pf-card pf-w5" id="card-torneio">
+        <h2 class="pf-h2">Por que este modelo</h2>
+        <p class="pf-sub">Erro por campo (WAPE) de cada método testado, de 2022 em diante. Menor é melhor.</p>
+        <div class="pf-chart" id="graf-torneio" data-draw="chAcc" data-source="acuracia">—</div>
+      </div>
+    </div>
+    </details>
+    <p class="pf-note">Como se atualiza: todo mês o projeto baixa os dados da ANP, roda o modelo, guarda a previsão feita e refaz a comparação com o realizado. Até haver previsões guardadas para um mês, a comparação usa o teste retroativo: o que o modelo teria previsto naquela data, treinado só com dados anteriores. Para cada empresa, o passado usa as participações atuais nos campos.</p>
+  </section>
+
+  <section class="pf-sec" id="royalties" hidden>
+    <p class="pf-p" id="royalties-intro">Royalties são a parte do valor do petróleo que as empresas pagam à União, aos estados e aos municípios. Boa parte vai para poucas cidades do litoral do Rio, que dependem desse dinheiro para fechar o orçamento.</p>
+    <div class="pf-ctrls">
+      <label class="pf-ctl pf-ctl-in"><span class="pf-ctl-h"><span>Estado ou município</span></span>
+        <select class="dash-select pf-sel" id="sel-entidade" aria-label="Estado ou município" data-draw="selEnt" data-source="royalties_resumo"></select></label>
+      <div class="pf-ctl pf-ctl-in"><span class="pf-ctl-h"><span>Regra de divisão</span></span>
+        <div class="pf-seg" id="lei-seg" role="group" aria-label="Regra de divisão dos royalties">
+          <button data-lei="0" class="on">Regra atual</button>
+          <button data-lei="1">Se a Lei 12.734 valer</button>
+        </div></div>
+    </div>
+    <p class="pf-p pf-gap" data-draw="txtRoy" data-source="royalties_resumo royalties_benef"></p>
+    <div class="pf-trio" id="roy-trio">
+      <div class="pf-n"><div class="pf-n-l">Recebido em 12 meses (ANP)</div>
+        <div class="pf-n-v"><span data-draw="rkv" data-fmt="f0" data-source="royalties_resumo" data-field="ult12">—</span><span class="pf-kpi-u">R$ mi</span></div>
+        <div class="pf-n-s">Errou <b data-draw="rkv" data-fmt="f1" data-source="royalties_resumo" data-field="erro6">—</b>% em média prevendo 6 meses antes · <span data-draw="confEnt" data-source="royalties_resumo"></span></div></div>
+      <div class="pf-n"><div class="pf-n-l">Previsto para os próximos 12 meses</div>
+        <div class="pf-n-v"><span data-draw="rkv" data-fmt="f0" data-source="royalties_resumo" data-field="prox12">—</span><span class="pf-kpi-u">R$ mi</span></div>
+        <div class="pf-n-s"><span class="pf-chip" data-draw="rkv" data-fmt="pct" data-good="up" data-source="royalties_resumo" data-field="var_pct">—</span> sobre os 12 meses publicados</div></div>
+      <div class="pf-n"><div class="pf-n-l">Se a Lei 12.734 valer (mesmo período)</div>
+        <div class="pf-n-v"><span data-draw="rkv" data-fmt="f0" data-source="royalties_resumo" data-field="lei12">—</span><span class="pf-kpi-u">R$ mi</span></div>
+        <div class="pf-n-s">Diferença de <b data-draw="rkv" data-fmt="f0" data-source="royalties_resumo" data-field="dif_lei">—</b> R$ mi</div></div>
+    </div>
+    <div class="pf-lay pf-gap">
+      <div class="pf-card" id="card-royalties">
+        <h2 class="pf-h2">Royalties de <span data-draw="entNome">—</span> por mês</h2>
+        <p class="pf-sub">R$ milhões, pelo mês em que o dinheiro chega (a ANP repassa cerca de dois meses depois da produção). Linha cinza: meses em que a produção já saiu, mas a ANP ainda não publicou a divisão; o valor é estimado com a mesma fatia de cada campo.</p>
+        <div class="pf-legend">
+          <span><i class="pf-sw ln" data-c="0"></i>Recebido (ANP)</span>
+          <span><i class="pf-sw ln dot" data-c="1"></i>Previsto 6 meses antes</span>
+          <span><i class="pf-sw ln dash" data-c="-1"></i>Estimado</span>
+          <span><i class="pf-sw ln dash" data-c="1"></i>Previsão</span>
+          <span><i class="pf-sw band" data-c="1"></i>Faixa P10–P90</span>
+          <span><i class="pf-sw ln" data-c="2"></i>Se a Lei 12.734 valer</span>
+        </div>
+        <div class="pf-chart tall" id="graf-royalties" data-draw="chRoyEnt" data-source="royalties_benef">—</div>
+      </div>
+      <div class="pf-card pf-w7" id="card-ranking">
+        <h2 class="pf-h2">Quem recebe mais</h2>
+        <p class="pf-sub">R$ milhões em 12 meses. Toque numa linha para ver o gráfico. "Erro" é o erro médio mensal da previsão feita 6 meses antes; "confiança" junta esse erro e um teste fora da amostra.</p>
+        <div class="pf-tw">
+          <table class="pf-table" id="tab-royalties" data-source="royalties_resumo" data-row-key="entidade">
+            <thead><tr>
+              <th data-field="entidade" class="txt">Estado ou município</th>
+              <th data-field="ult12">Recebido</th>
+              <th data-field="prox12">Previsto</th>
+              <th data-field="var_pct">Variação</th>
+              <th data-field="lei12">Lei 12.734</th>
+              <th data-field="erro6">Erro</th>
+              <th data-field="confianca" class="txt">Confiança</th>
+            </tr></thead>
+            <tbody data-draw="tbRoy"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="pf-card pf-w5" id="card-stf">
+        <h2 class="pf-h2">A Lei 12.734 e o STF</h2>
+        <div class="pf-stf">
+          <p>Aprovada em 2012, a lei divide os royalties do mar com todos os estados e municípios, por fundos especiais. Os municípios em frente aos campos passariam de cerca de 26,25% para 4% dos royalties; os estados em frente aos campos, de cerca de 26,25% para 20%.</p>
+          <p>A lei está suspensa por liminar do STF desde 2013. O julgamento recomeçou em maio de 2026, com voto da relatora pela inconstitucionalidade, e foi interrompido por pedido de vista. A retomada, marcada para 4 de novembro, foi tirada da pauta e não tem nova data.</p>
+          <p>O cenário aplica esses percentuais à mesma previsão. É uma ordem de grandeza: usa a regra dos contratos de concessão para toda a produção e não conta o que cada município receberia de volta pelo fundo especial, dividido pelas regras do FPM.</p>
+          <small>Fontes: MPRJ, Relatório Técnico Distribuição das Rendas Petrolíferas; Agência Brasil e TMC (situação do julgamento em 16/11/2026).</small>
+        </div>
+      </div>
+    </div>
+    <details class="pf-mais pf-gap"><summary>Como os royalties de cada lugar são previstos</summary>
+      <div class="pf-stf pf-gap">
+        <p>A lei divide os royalties de cada campo por linhas geográficas do IBGE e pelas instalações de embarque, em regras que mudam conforme novos poços entram em produção. Em vez de reproduzir essas regras, o modelo estima, com os últimos 24 meses publicados pela ANP, a fatia de cada estado e município nos royalties de cada grupo de campos. Depois aplica essas fatias à previsão de royalties por campo.</p>
+        <p>Para medir o erro, a fatia é estimada só com dados anteriores a cada data e comparada com o que a ANP publicou. Municípios com dutos ou terminais (como Cubatão, Guararema ou Volta Redonda) têm parte da receita fora do modelo e aparecem com confiança menor. Ficam de fora os estados com produção principalmente em terra.</p>
+        <p><b>Conferência com valores já divulgados.</b> Para os meses de 2026 que a ANP já repassou, mas cujos arquivos ainda não estavam na base, comparei a estimativa do modelo com os números publicados. Maricá, de janeiro a julho: R$ 1,70 bi no modelo contra R$ 1,91 bi divulgados (−11%). Repasse de maio: Estado do Rio, R$ 1,77 bi contra R$ 1,84 bi (−4%); Saquarema, R$ 289 mi contra R$ 303 mi (−5%); Macaé, R$ 177 mi contra R$ 183 mi (−3%); Araruama, R$ 135 mi contra R$ 132 mi (+2%). O Estado de São Paulo ficou bem abaixo (R$ 89 mi contra R$ 167 mi): o campo de Bacalhau começou a produzir em outubro de 2025 e ainda não tem histórico para estimar a fatia de cada beneficiário.</p>
+        <small>Fontes da conferência: BandNews FM (Maricá, jan–jul/2026) e Brasil 61 (repasse de maio de 2026), com dados da ANP.</small>
+      </div>
+    </details>
+  </section>
+
+  <section class="pf-sec" id="premissas" hidden>
+    <p class="pf-p" id="premissas-intro">Para quem quer conferir a previsão: o que move a receita, os números mês a mês e de onde vem cada premissa.</p>
+    <div class="pf-ctrls">
+      <label class="pf-ctl pf-ctl-in"><span class="pf-ctl-h"><span>Empresa</span></span>
+        <select class="dash-select pf-sel" id="sel-empresa-prem" aria-label="Empresa" data-draw="selEmpP" data-source="pesos"></select></label>
+    </div>
+    <div class="pf-lay pf-gap">
+      <div class="pf-card pf-w6" id="card-ponte">
+        <h2 class="pf-h2">Por que a receita muda</h2>
+        <p class="pf-sub">Receita bruta de <span data-draw="empNomeP">—</span>, R$ bilhões: últimos 12 meses realizados, efeito de cada fator e próximos 12 meses previstos.</p>
+        <div class="pf-explica" data-draw="txtExplica" data-source="ponte_receita receita_meses precos"></div>
+        <div class="pf-legend">
+          <span><i class="pf-sw" data-c="0"></i>Receita em 12 meses</span>
+          <span><i class="pf-sw" data-c="2"></i>Aumenta a receita</span>
+          <span><i class="pf-sw" data-c="1"></i>Reduz a receita</span>
+        </div>
+        <div class="pf-chart" id="graf-ponte" data-draw="chPonte" data-source="ponte_receita">—</div>
+      </div>
+      <div class="pf-card pf-w6" id="card-brent">
+        <h2 class="pf-h2">Brent: realizado e cenário</h2>
+        <p class="pf-sub">US$ por barril. O preço é o fator que mais mexe na receita prevista. O cenário base segue a projeção da EIA; a faixa mostra variações já vistas no passado.</p>
+        <div class="pf-legend">
+          <span><i class="pf-sw ln" data-c="0"></i>Realizado</span>
+          <span><i class="pf-sw ln dash" data-c="1"></i>Cenário base</span>
+          <span><i class="pf-sw band" data-c="1"></i>Faixa P10–P90</span>
+        </div>
+        <div class="pf-chart" id="graf-brent" data-draw="chPreco" data-source="precos">—</div>
+      </div>
+      <div class="pf-card" id="card-meses">
+        <h2 class="pf-h2">Mês a mês</h2>
+        <p class="pf-sub">Parte de <span data-draw="empNomeP">—</span>. Produção em mil bbl/d, Brent em US$/bbl, preço médio em R$ por barril (petróleo e gás), receita e royalties em R$ bi. Nos meses realizados de 2026, o preço por campo é estimado a partir do Brent, porque a ANP publicou o preço de referência até dez/2025.</p>
+        <div class="pf-tw">
+          <table class="pf-table pf-fixa" id="tab-meses" data-source="receita_meses" data-row-key="empresa,mes">
+            <thead><tr>
+              <th data-field="mes" class="txt">Mês</th>
+              <th data-field="origem" class="txt">Dado</th>
+              <th data-field="prod">Produção</th>
+              <th data-field="dias">Dias</th>
+              <th data-field="brent">Brent</th>
+              <th data-field="cambio">Câmbio</th>
+              <th data-field="preco_rs">R$/bbl</th>
+              <th data-field="receita">Receita</th>
+              <th data-field="royalties">Royalties</th>
+            </tr></thead>
+            <tbody data-draw="tbMeses"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="pf-card" id="card-fontes">
+        <h2 class="pf-h2">Premissas e fontes</h2>
+        <p class="pf-sub">O valor usado em cada premissa e a fonte pública de onde ele vem.</p>
+        <div class="pf-tw">
+          <table class="pf-table pf-fixa pf-fontes" id="tab-fontes" data-source="fontes" data-row-key="ordem">
+            <thead><tr>
+              <th data-field="premissa" class="txt">Premissa</th>
+              <th data-field="valor" class="txt">Valor usado</th>
+              <th data-field="fonte" class="txt">Fonte</th>
+            </tr></thead>
+            <tbody data-draw="tbFontes"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pf-sec" id="socios" hidden>
+    <p class="pf-p" id="socios-intro">Num campo de petróleo, várias empresas dividem a produção, mas só uma opera. Aqui está a parte de cada empresa, campo a campo, e quanto dela depende da Petrobras como operadora.</p>
+    <div class="pf-lay">
+      <div class="pf-card pf-w5" id="card-dependencia">
+        <h2 class="pf-h2">Quanto cada sócio depende da Petrobras como operadora</h2>
+        <p class="pf-sub">Parcela da produção prevista de cada empresa, por quem opera o campo. O número é a parte operada pela Petrobras. Toque para escolher a empresa.</p>
+        <div class="pf-legend">
+          <span><i class="pf-sw" data-c="0"></i>Petrobras opera</span>
+          <span><i class="pf-sw" data-c="1"></i>A própria empresa opera</span>
+          <span><i class="pf-sw" data-c="-1"></i>Terceiros</span>
+        </div>
+        <div class="pf-chart" id="graf-dependencia" data-draw="chDep" data-source="dependencia">—</div>
+      </div>
+      <div class="pf-card pf-w7" id="card-empresa">
+        <div class="pf-top">
+          <div>
+            <h2 class="pf-h2">A parte da empresa</h2>
+            <p class="pf-sub">Produção líquida, mil bbl/d. O gráfico mês a mês fica na aba Previsão.</p>
+          </div>
+          <select class="dash-select pf-sel" id="sel-empresa" aria-label="Empresa" data-draw="selE" data-source="empresas_resumo"></select>
+        </div>
+        <div class="pf-stats">
+          <div><div class="pf-stat-l">Próximos 12 meses</div><div class="pf-stat-v" data-draw="ekv" data-fmt="f1" data-source="empresas_resumo" data-field="prox12">—</div></div>
+          <div><div class="pf-stat-l">Variação</div><div class="pf-stat-v" data-draw="ekv" data-fmt="pct" data-good="up" data-source="empresas_resumo" data-field="var_pct">—</div></div>
+          <div><div class="pf-stat-l">Receita 12m (R$ bi)</div><div class="pf-stat-v" data-draw="ekv" data-fmt="f2" data-source="empresas_resumo" data-field="receita12">—</div></div>
+          <div><div class="pf-stat-l">Operado pela Petrobras</div><div class="pf-stat-v" data-draw="dkv" data-fmt="pc" data-source="dependencia" data-field="petrobras_pct">—</div></div>
+          <div><div class="pf-stat-l">Erro da previsão de 6 meses</div><div class="pf-stat-v" data-draw="dkv" data-fmt="pc" data-source="dependencia" data-field="erro6">—</div></div>
+        </div>
+      </div>
+      <div class="pf-card" id="card-socio-campos">
+        <h2 class="pf-h2">Campo a campo</h2>
+        <p class="pf-sub">A parte da empresa escolhida em cada campo: participação efetiva, produção líquida (mil bbl/d) e receita bruta. Participações da ANP, com os acordos de individualização em vigor.</p>
+        <div class="pf-tw">
+          <table class="pf-table pf-fixa" id="tab-socio" data-source="socios_campos" data-row-key="empresa,unidade">
+            <thead><tr>
+              <th data-field="unidade" class="txt">Campo</th>
+              <th data-field="operador" class="txt">Operadora</th>
+              <th data-field="part_pct">Participação</th>
+              <th data-field="ult12">Últ. 12m</th>
+              <th data-field="prox12">Próx. 12m</th>
+              <th data-field="var_pct">Variação</th>
+              <th data-field="receita12">Receita 12m (R$ bi)</th>
+            </tr></thead>
+            <tbody data-draw="tbSoc"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="pf-card" id="card-tabela-empresas">
+        <h2 class="pf-h2">Todas as empresas</h2>
+        <p class="pf-sub">Toque no título de uma coluna para ordenar, ou numa linha para escolher a empresa.</p>
+        <div class="pf-tw">
+          <table class="pf-table" id="tab-empresas" data-sort="emp" data-source="empresas_resumo" data-row-key="empresa">
+            <thead><tr>
+              <th data-field="empresa" class="txt">Empresa</th>
+              <th data-field="ult12">Últ. 12m (mil bbl/d)</th>
+              <th data-field="prox12" class="desc">Próx. 12m (mil bbl/d)</th>
+              <th data-field="var_pct">Variação</th>
+              <th data-field="receita12">Receita 12m (R$ bi)</th>
+              <th data-field="royalties12">Royalties 12m (R$ bi)</th>
+            </tr></thead>
+            <tbody data-draw="tbE"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pf-sec" id="plataformas" hidden>
+    <p class="pf-p" id="plat-crescimento"><b data-draw="kv" data-fmt="nome" data-source="concentracao" data-field="top1">—</b> e <b data-draw="kv" data-fmt="nome" data-source="concentracao" data-field="top2">—</b> respondem por <b data-draw="kv" data-fmt="f0" data-source="concentracao" data-field="pct">—</b>% do aumento de <b data-draw="kv" data-fmt="f0" data-source="concentracao" data-field="total">—</b> mil bbl/d previsto para os próximos 12 meses. As plataformas que ainda vão chegar (P-80, P-82 e P-83) entram com <b data-draw="kv" data-fmt="f0" data-source="kpis" data-field="valor" data-where="kpi=plataformas12">—</b> mil bbl/d na média desse período e chegam a <b data-draw="kv" data-fmt="f0" data-source="kpis" data-field="valor" data-where="kpi=plataformas">—</b> em mar/2028. O restante vem de plataformas já instaladas que ainda estão subindo a produção.</p>
+    <div class="pf-lay">
+      <div class="pf-card pf-w6" id="card-crescimento">
+        <h2 class="pf-h2">De onde vem o aumento</h2>
+        <p class="pf-sub">Próximos 12 meses menos últimos 12, média em mil bbl/d</p>
+        <div class="pf-chart" id="graf-crescimento" data-draw="chCres" data-source="crescimento">—</div>
+      </div>
+      <div class="pf-card pf-w6" id="card-projetos">
+        <h2 class="pf-h2">Plataformas que vão chegar a Búzios</h2>
+        <p class="pf-sub">Produção prevista (P50), mil bbl/d, já incluída na previsão de Búzios</p>
+        <div class="pf-legend">
+          <span><i class="pf-sw" data-c="1"></i>P-80</span>
+          <span><i class="pf-sw" data-c="2"></i>P-82</span>
+          <span><i class="pf-sw" data-c="3"></i>P-83</span>
+        </div>
+        <div class="pf-chart" id="graf-projetos" data-draw="chProj" data-source="projetos_mensal">—</div>
+      </div>
+    </div>
+    <p class="pf-p pf-gap" id="plat-rampa">Nas <b data-draw="kv" data-fmt="f0" data-source="rampa_resumo" data-field="n" data-where="grupo=todas">—</b> plataformas que entraram em operação desde 2010, a mediana chega a <b data-draw="kv" data-fmt="f0" data-source="rampa_resumo" data-field="pct_12" data-where="grupo=todas">—</b>% da capacidade em 12 meses e a 80% em <b data-draw="kv" data-fmt="f0" data-source="rampa_resumo" data-field="meses_80" data-where="grupo=todas">—</b> meses. As <b data-draw="kv" data-fmt="f0" data-source="rampa_resumo" data-field="n" data-where="grupo=buzios_mero">—</b> mais recentes de Búzios e Mero foram mais rápidas: 80% em <b data-draw="kv" data-fmt="f0" data-source="rampa_resumo" data-field="meses_80" data-where="grupo=buzios_mero">—</b> meses na mediana, e <b data-draw="kv" data-fmt="f0" data-source="rampa_resumo" data-field="acima_nominal" data-where="grupo=buzios_mero">—</b> delas passaram da capacidade nominal. Fora desses dois campos, as <b data-draw="kv" data-fmt="f0" data-source="rampa_resumo" data-field="n" data-where="grupo=outras">—</b> com mais de 18 meses de operação estavam em <b data-draw="kv" data-fmt="f0" data-source="rampa_resumo" data-field="pct_12" data-where="grupo=outras">—</b>% aos 12 meses.</p>
+    <div class="pf-lay">
+      <div class="pf-card pf-w5" id="card-curva">
+        <h2 class="pf-h2">Quanto tempo uma plataforma leva para encher</h2>
+        <p class="pf-sub">% da capacidade a cada mês após o 1º óleo. Linha = mediana; faixa = P10–P90; tracejado = 80%.</p>
+        <div class="pf-chart" id="graf-curva" data-draw="chCurva" data-source="curva_rampa">—</div>
+      </div>
+      <div class="pf-card pf-w7" id="card-rampas">
+        <h2 class="pf-h2">Plataformas recentes, uma a uma</h2>
+        <p class="pf-sub">Só as que têm capacidade nominal divulgada. Capacidade em mil bbl/d; pico = maior produção mensal sobre a capacidade.</p>
+        <div class="pf-tw">
+          <table class="pf-table pf-fixa" id="tab-rampas" data-source="rampas" data-row-key="plataforma">
+            <thead><tr>
+              <th data-field="plataforma" class="txt">Plataforma</th>
+              <th data-field="unidade" class="txt">Campo</th>
+              <th data-field="inicio">1º óleo</th>
+              <th data-field="capacidade">Capacidade</th>
+              <th data-field="meses_80">Meses até 80%</th>
+              <th data-field="pct_12">Aos 12 meses</th>
+              <th data-field="pico_pct">Pico</th>
+            </tr></thead>
+            <tbody data-draw="tbRampas"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pf-sec" id="campos" hidden>
+    <p class="pf-p" id="campos-intro">Os maiores campos do mar, um a um: quem opera, o histórico e a previsão.</p>
+    <div class="pf-lay">
+      <div class="pf-card" id="card-topcampos">
+        <h2 class="pf-h2">Maiores campos: últimos 12 meses × próximos 12</h2>
+        <p class="pf-sub">Média em mil bbl/d. Toque num campo para ver o detalhe abaixo.</p>
+        <div class="pf-legend">
+          <span><i class="pf-sw" style="border-radius:50%"></i>Últimos 12 meses</span>
+          <span><i class="pf-sw" data-c="1" style="border-radius:50%"></i>Próximos 12 meses</span>
+        </div>
+        <div class="pf-chart" id="graf-topcampos" data-draw="chTopU" data-source="unidades_resumo">—</div>
+      </div>
+      <div class="pf-card" id="card-campo">
+        <div class="pf-top">
+          <div>
+            <h2 class="pf-h2">Detalhe do campo</h2>
+            <p class="pf-sub">Mil bbl/d, produção do campo inteiro. Campos que compartilham poços aparecem juntos.</p>
+          </div>
+          <select class="dash-select pf-sel" id="sel-campo" aria-label="Campo" data-draw="selU" data-source="unidades_resumo"></select>
+        </div>
+        <div class="pf-stats">
+          <div><div class="pf-stat-l">Operadora</div><div class="pf-stat-v" data-draw="ukv" data-fmt="txt" data-source="unidades_resumo" data-field="operador">—</div></div>
+          <div><div class="pf-stat-l">Últimos 12 meses</div><div class="pf-stat-v" data-draw="ukv" data-fmt="f1" data-source="unidades_resumo" data-field="ult12">—</div></div>
+          <div><div class="pf-stat-l">Próximos 12 meses</div><div class="pf-stat-v" data-draw="ukv" data-fmt="f1" data-source="unidades_resumo" data-field="prox12">—</div></div>
+          <div><div class="pf-stat-l">Variação</div><div class="pf-stat-v" data-draw="ukv" data-fmt="pct" data-good="up" data-source="unidades_resumo" data-field="var_pct">—</div></div>
+          <div><div class="pf-stat-l">Royalties 12 meses (R$ bi)</div><div class="pf-stat-v" data-draw="ukv" data-fmt="f2" data-source="unidades_resumo" data-field="royalties12">—</div></div>
+        </div>
+        <div class="pf-ctl pf-ctl-in"><span class="pf-ctl-h"><span>Comparar com a previsão feita</span></span>
+          <div class="pf-seg" id="antecedencia-campo" role="group" aria-label="Antecedência da previsão passada do campo">
+            <button data-h="1">1 mês antes</button>
+            <button data-h="3">3 meses</button>
+            <button data-h="6" class="on">6 meses</button>
+            <button data-h="12">12 meses</button>
+          </div></div>
+        <p class="pf-note" id="campo-acerto">Prevendo <span data-draw="hNome">—</span> antes, o modelo errou em média <b data-draw="uakv" data-fmt="f1" data-source="acerto_campos" data-field="erro12">—</b>% neste campo nos últimos 12 meses; repetir o último mês erraria <b data-draw="uakv" data-fmt="f1" data-source="acerto_campos" data-field="erro12_ing">—</b>%.</p>
+        <div class="pf-legend">
+          <span><i class="pf-sw ln" data-c="0"></i>Realizado</span>
+          <span><i class="pf-sw ln dot" data-c="1"></i>Previsto meses antes</span>
+          <span><i class="pf-sw ln dash" data-c="1"></i>Previsão (P50)</span>
+          <span><i class="pf-sw band" data-c="1"></i>Faixa P10–P90</span>
+        </div>
+        <div class="pf-chart tall" id="graf-campo" data-draw="chU" data-source="hist_campos central_campos">—</div>
+      </div>
+      <div class="pf-card" id="card-tabela-campos">
+        <h2 class="pf-h2">Os 15 maiores campos</h2>
+        <p class="pf-sub">Toque no título de uma coluna para ordenar, ou numa linha para ver o gráfico.</p>
+        <div class="pf-tw">
+          <table class="pf-table" id="tab-campos" data-sort="unit" data-source="unidades_resumo" data-row-key="unidade">
+            <thead><tr>
+              <th data-field="unidade" class="txt">Campo</th>
+              <th data-field="operador" class="txt">Operadora</th>
+              <th data-field="ult12">Últ. 12m (mil bbl/d)</th>
+              <th data-field="prox12" class="desc">Próx. 12m (mil bbl/d)</th>
+              <th data-field="var_pct">Variação</th>
+              <th data-field="receita12">Receita 12m (R$ bi)</th>
+              <th data-field="royalties12">Royalties 12m (R$ bi)</th>
+            </tr></thead>
+            <tbody data-draw="tbU"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pf-foot" id="notas">
+    <details>
+      <summary>Como ler este painel e premissas</summary>
+      <dl>
+        <dt>mil bbl/d</dt>
+        <dd>Mil barris de petróleo por dia. Um barril tem cerca de 159 litros.</dd>
+        <dt>Brent</dt>
+        <dd>Preço de referência do petróleo no mercado mundial, em dólares por barril. Quase todo petróleo é vendido com base nele.</dd>
+        <dt>Previsto × realizado</dt>
+        <dd>A previsão que o modelo fez meses antes, comparada com o número que a ANP publicou depois. As previsões já feitas não mudam.</dd>
+        <dt>Unidades modeladas</dt>
+        <dd>43 grupos de campos do mar em produção. Campos que compartilham poços (ex.: Tupi, Búzios e suas áreas de excedente) são previstos juntos. Os campos que ficaram de fora somam menos de 1 mil bbl/d.</dd>
+        <dt>P10, P50 e P90</dt>
+        <dd>P50 é o cenário central. Há 10% de chance de ficar abaixo do P10 e 10% de ficar acima do P90.</dd>
+        <dt>Produção líquida</dt>
+        <dd>A parte de cada empresa: produção do campo × participação no contrato (Relação de Concessionários da ANP).</dd>
+        <dt>Capacidade das plataformas</dt>
+        <dd>A divulgada pela operadora; para plataformas antigas sem esse dado, o maior mês de produção nos três primeiros anos.</dd>
+        <dt>WAPE</dt>
+        <dd>Erro absoluto somado dividido pela produção real somada. Mede quanto a previsão erra, em %.</dd>
+        <dt>Plataformas novas</dt>
+        <dd>1º óleo sorteado dentro de uma janela: P-80 fev–jun/2027, P-82 abr–ago/2027, P-83 set/2027–mar/2028 (conferido em 13/11/2026).</dd>
+        <dt>Seu cenário</dt>
+        <dd>Aproximação sobre a previsão do modelo (P50): preço e câmbio agem em proporção sobre a receita; não inclui custos nem impostos sobre o lucro, que não são públicos por campo.</dd>
+        <dt>Fontes</dt>
+        <dd>ANP (produção por poço, preços de referência, royalties, concessionários), Banco Central (câmbio), EIA (cenário de Brent). Dados de produção até set/2026.</dd>
+      </dl>
+    </details>
+  </footer>
+  <p class="pf-site">Código, metodologia e dados: <a href="https://github.com/keninagaki17/petro-forecast">github.com/keninagaki17/petro-forecast</a>. Projeto pessoal e independente, feito só com dados públicos (ANP, Banco Central e EIA), sem informações internas de empresas e sem recomendação de investimento.</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="js/runtime.js"></script>
+<script src="js/pf-core.js"></script>
+<script src="js/pf-graficos.js"></script>
+<script src="js/pf-previsao.js"></script>
+<script src="js/pf-novo.js"></script>
+<script src="js/pf-premissas.js"></script>
+<script src="js/pf-royalties.js"></script>
+</body>
+</html>

@@ -11,3 +11,4 @@ saidas_reais/
 dados_reais/
 run*.log
 .pytest_cache/
+site/data/
